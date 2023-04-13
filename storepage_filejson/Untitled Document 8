@@ -1,0 +1,56 @@
+[apps@tselprtlpapp3 menu]$ cat prabayar_menu.json
+{
+    "data" : [
+        {
+            "name" : {
+                "id": "",
+                "en": ""
+            },
+            "child" : [
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-08/beli-sim-1.png",
+                    "title" : {
+                        "id": "Beli SIM Card Baru",
+                        "en": "Buy New SIM Card"
+                    },
+                    "description" : {
+                        "id": "Beli dan Pilih Nomor Baru Telkomsel Anda disini",
+                        "en": "Buy and choose your new Telkomsel number here"
+                    },
+                    "targetURL" : "https://my.telkomsel.com/starterpack/landing-page?utm_source=wec&utm_medium=store&utm_campaign=service-list&_ga=2.116816774.1216366366.1659925143-797215751.1639646516",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-08/migrasi-ganti-kartu-2.png",
+                    "title" : {
+                        "id": "Ganti Kartu dan Migrasi ke 4G",
+                        "en": "SIM Card Replacement"
+                    },
+                    "description" : {
+                        "id": "Layanan untuk kartu hilang dan beralih ke SIM card 4G",
+                        "en": "Lost SIM card replacement and switching to 4G SIM card"
+                    },
+                    "targetURL" : "https://www.telkomsel.com/support/ganti-kartu-di-grapari?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+				{
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-08/penanganan-keluhan-3.png",
+                    "title" : {
+                        "id": "Penanganan keluhan",
+                        "en": "Help Center"
+                    },
+                    "description" : {
+                        "id": "Temukan solusi untuk masalah Anda disini",
+                        "en": "Have an issue? Find the solution here"
+                    },
+                    "targetURL" : "https://www.telkomsel.com/support?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                }
+            ]
+        }
+    ]
+}
+

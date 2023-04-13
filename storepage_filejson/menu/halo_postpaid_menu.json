@@ -1,0 +1,120 @@
+{
+        "data": [{
+                "name": {
+                        "id": "Halo Postpaid Menu",
+                        "en": "Hello Postpaid Menu"
+                },
+                "child": [{
+                                "icon": "https://43.255.196.44/sites/default/files/2022-03/Sim%20Card.png",
+                                "title": {
+                                        "id": "Migrasi ke Halo",
+                                        "en": "Migration to Halo"
+                                },
+                                "description": {
+                                        "id": "Lorem ipsum dolor sit amet",
+                                        "en": "Lorem ipsum dolor sit amet"
+                                },
+                                "targetURL": "https://awswebpre.tdw.telkomsel.com/",
+                                "type" : ["login", "Halo"],
+                                "type_user":"Postpaid"
+                        },
+			{
+                                "icon": "https://43.255.196.44/sites/default/files/2022-03/Sim%20Card.png",
+                                "title": {
+                                        "id": "Detail Tagihan & Riwayat",
+                                        "en": "Billing Details & History"
+                                },
+                                "description": {
+                                        "id": "Lorem ipsum dolor sit amet",
+                                        "en": "Lorem ipsum dolor sit amet"
+                                },
+                                "targetURL": "https://43.255.196.44/shops/store/halo/billing-details",
+                                "type" : ["login", "Halo"],
+                                "type_user":"Postpaid"
+                        },
+                        {
+                                "icon": "https://43.255.196.44/sites/default/files/2022-03/Roaming.png",
+                                "title": {
+                                        "id": "Aktivasi Halo Online",
+                                        "en": "Hello Online Activation"
+                                },
+                                "description": {
+                                        "id": "Lorem ipsum dolor sit amet",
+                                        "en": "Lorem ipsum dolor sit amet"
+                                },
+                                "targetURL": "https://tdwpreweb.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list&_ga=2.17306617.1938750051.1657504897-797215751.1639646516",
+                                "type" : ["login", "Halo"],
+                                "type_user":"Postpaid"
+                        },
+                        {
+                                "icon": "https://43.255.196.44/sites/default/files/2022-03/Device%20mobile.png",
+                                "title": {
+                                        "id": "Bundling Program",
+                                        "en": "Program Bundles"
+                                },
+                                "description": {
+                                        "id": "Lorem ipsum dolor sit amet",
+                                        "en": ""
+                                },
+                                "targetURL": "https://tdwpreweb.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list&_ga=2.17306617.1938750051.1657504897-797215751.1639646516",
+                                "type" : ["login", "Halo"],
+                                "type_user":"Postpaid"
+                        },
+                        {
+                                "icon": "https://43.255.196.44/sites/default/files/2022-03/Roaming.png",
+                                "title": {
+                                        "id": "Paket",
+                                        "en": "Package"
+                                },
+                                "description": {
+                                        "id": "Lorem ipsum dolor sit amet",
+                                        "en": "Lorem ipsum dolor sit amet"
+                                },
+                                "targetURL": "https://tdwpreweb.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list&_ga=2.17306617.1938750051.1657504897-797215751.1639646516",
+                                "type" : ["login", "Halo"],
+                                "type_user":"Postpaid"
+                        },
+                        {
+                                "icon": "https://43.255.196.44/sites/default/files/2022-03/Device%20mobile.png",
+                                "title": {
+                                        "id": "Cek Tagihan",
+                                        "en": "Check Bill"
+                                },
+                                "description": {
+                                        "id": "Lorem ipsum dolor sit amet",
+                                        "en": "Lorem ipsum dolor sit amet"
+                                },
+                                "targetURL": "http://awswebpre.tdwhaqa.telkomsel.com/",
+                                "type" : ["login", "Halo"],
+                                "type_user":"Postpaid"
+                        },
+			{
+				 "icon": "https://43.255.196.44/sites/default/files/2022-03/Device%20mobile.png",
+                                "title": {
+                                        "id": "Perbarui Data Pelanggan",
+                                        "en": "Update Customer Data"
+                                },
+                                "description": {
+                                        "id": "Lengkapi formulir pembaruan data pelanggan untuk pengelolaan data yang lebih baik",
+                                        "en": "Complete the customer data update form for better data management"
+                                },
+                                "targetURL": "https://43.255.196.44/shops/store/halo/service/update-billing",
+                                "type" : ["login", "Halo"],
+                                "type_user":"Postpaid"
+			},
+			{
+                    		"icon" : "https://www.telkomsel.com/sites/default/files/2022-05/addonpackage-24.png",
+                    		"title" : {
+                        		"id": "Paket Tambahan",
+                        		"en": "Additional Packages"
+                    		},
+                    		"description" : {
+                        		"id": "Pilih paket tambahan untuk internet, telepon, SMS, dan hiburan agar konektivitas tetap terjaga.",
+                        		"en": "Choose additional packages for internet, phone, SMS, and entertainment to maintain connectivity."
+                    		},
+                    		"targetURL" : "https://tdwpreweb.telkomsel.com/app/packages?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    		"type" : ["postpaid"]
+                	}
+                ]
+        }]
+}

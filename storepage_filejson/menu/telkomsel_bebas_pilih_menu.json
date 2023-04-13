@@ -1,0 +1,33 @@
+{
+    "data" : [
+        {
+            "name" : "Halo Menu",
+            "child" : [
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-05/svg--registrasi-halo-32p.svg",
+                    "title" : "Migrasi ke Halo",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://my.telkomsel.com/halo",
+                    "type": ["login & nonlogin"],
+                    "type_user":"default"
+                },
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-05/svg-migrasi-halo-32p.svg",
+                    "title" : "Aktivasi Halo Online",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "",
+                    "type": ["login & nonlogin"],
+                    "type_user":"default"
+                },
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-05/svg--bundling-32p.svg",
+                    "title" : "Bundling Program",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://google.com",
+                    "type": ["login & nonlogin"],
+                    "type_user":"default"
+                }
+            ]
+        }
+    ]
+}

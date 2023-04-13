@@ -1,0 +1,55 @@
+[apps@tselprtlpapp3 menu]$ cat telkomsel_halo_prepaid_menu.json
+{
+	"data": [{
+		"name":{
+			"id": "",
+			"en": ""
+		},
+		"child": [
+			{
+				"icon": "https://www.telkomsel.com/sites/default/files/2022-04/svg--registrasi-halo-32p.svg",
+				"title":{
+					"id": "Registrasi Halo",
+					"en": "Registrasi Halo"
+				},
+				"description": {
+					"id": "Daftar Telkomsel Halo secara online dengan cepat dan mudah.",
+					"en": "Daftar Telkomsel Halo secara online dengan cepat dan mudah."
+				},
+				"targetURL": "https://my.telkomsel.com/psb/dapatkan-nomor-pascabayar?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+				"type": ["login", "PraBayar"],
+				"type_user":"Prepaid"
+			},
+			{
+				"icon": "https://www.telkomsel.com/sites/default/files/2022-04/svg-migrasi-halo-32p.svg",
+				"title":{
+					"id": "Migrasi ke Halo",
+					"en": "Migrasi ke Halo"
+				},
+				"description":{
+					"id": "Beralih dari prabayar ke pascabayar Telkomsel Halo secara online.",
+					"en": "Beralih dari prabayar ke pascabayar Telkomsel Halo secara online."
+				},
+				"targetURL1": "https://my.telkomsel.com/migrate/migrate-to-halo?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+				"targetURL": "https://my.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list&_ga=2.17306617.1938750051.1657504897-797215751.1639646516",
+				"type": ["login", "PraBayar"],
+				"type_user":"Prepaid"
+			},
+			{
+				"icon": "https://www.telkomsel.com/sites/default/files/2022-04/svg--bundling-32p.svg",
+				"title":{
+					"id": "Bundling Program",
+					"en": "Bundling Program"
+				},
+				"description":{
+					"id": "Miliki smartphone pilihan dengan Halo Unlimited Device Plan.",
+					"en": "Miliki smartphone pilihan dengan Halo Unlimited Device Plan."
+				},
+				"targetURL": "https://www.telkomsel.com/halodeviceplan?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+				"type": ["login", "PraBayar"],
+				"type_user":"Prepaid"
+			}
+		]
+	}]
+}
+

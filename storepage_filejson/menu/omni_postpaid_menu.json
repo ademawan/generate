@@ -1,0 +1,12 @@
+{
+	"data": [{
+		"name": "Omni Postpaid Menu",
+		"child": [{
+			"icon": "https://43.255.196.44/sites/default/files/2022-03/Sim%20Card.png",
+			"title": "Migrasi ke Halo",
+			"description": "Lorem ipsum dolor sit amet",
+			"targetURL": "https://my.telkomsel.com/halo",
+			"type": ["postpaid"]
+		}]
+	}]
+}

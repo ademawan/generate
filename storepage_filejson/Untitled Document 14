@@ -1,0 +1,354 @@
+[apps@tselprtlpapp3 menu]$ cat telkomsel_bebas_pilih_menu.json
+{
+    "data": [
+        {
+            "name": {
+                "id": "Unggulan",
+                "en": "Featured"
+            },
+            "child": [
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/pht.png",
+                    "title": {
+                        "id": "Paket Hemat Terlengkap",
+                        "en": "Complete Savings Package"
+                    },
+                    "description": {
+                        "id": "Dapatkan promo paket terhemat dari Telkomsel",
+                        "en": "Get the cheapest package promo from Telkomsel"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/ppm.png",
+                    "title": {
+                        "id": "Paket Pasti Murah",
+                        "en": "Definitely Cheap Packages"
+                    },
+                    "description": {
+                        "id": "Dapatkan promo paket murah dari Telkomsel",
+                        "en": "Get a cheap package promo from Telkomsel"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o?utm_source=wec&utm_medium=store&utm_campaign=service-list&target=direct-ep",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                }
+            ]
+        },
+        {
+            "name": {
+                "id": "Toko Terdekat",
+                "en": "Nearest store"
+            },
+            "child": [
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/outletbase.png",
+                    "title": {
+                        "id": "Outlet",
+                        "en": "Outlet"
+                    },
+                    "description": {
+                        "id": "Bayar paket pilihan Anda di outlet terdekat",
+                        "en": "Pay for the package of your choice at the nearest outlet"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=outlet",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/indomart.png",
+                    "title": {
+                        "id": "Indomaret",
+                        "en": "Indomaret"
+                    },
+                    "description": {
+                        "id": "Bayar paket pilihan Anda di Indomaret terdekat",
+                        "en": "Pay for the package of your choice at the nearest Indomaret"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=indomaret",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/alfamart.png",
+                    "title": {
+                        "id": "Alfamart",
+                        "en": "Alfamart"
+                    },
+                    "description": {
+                        "id": "Bayar paket pilihan Anda di Alfamart terdekat",
+                        "en": "Pay for the package of your choice at the nearest Alfamart"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=alfamart",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/yogyagroup.png",
+                    "title": {
+                        "id": "Yogya Group",
+                        "en": "Yogya Group"
+                    },
+                    "description": {
+                        "id": "Bayar paket pilihan Anda di Yogya Group terdekat",
+                        "en": "Pay for the package of your choice at the nearest Yogya Group"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=yogyagroup",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/circlek.png",
+                    "title": {
+                        "id": "Circle K",
+                        "en": "Circle K"
+                    },
+                    "description": {
+                        "id": "Bayar paket pilihan Anda di Circle K terdekat",
+                        "en": "Pay for the package of your choice at the nearest Circle K"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=circlek",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/jne.png",
+                    "title": {
+                        "id": "JNE",
+                        "en": "JNE"
+                    },
+                    "description": {
+                        "id": "Bayar paket pilihan Anda di JNE terdekat",
+                        "en": "Pay for the package of your choice at the nearest JNE"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=jne",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/alfamidi.png",
+                    "title": {
+                        "id": "Alfamidi",
+                        "en": "Alfamidi"
+                    },
+                    "description": {
+                        "id": "Bayar paket pilihan Anda di Alfamidi terdekat",
+                        "en": "Pay for the package of your choice at the nearest Alfamidi"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=alfamidi",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/minimart.png",
+                    "title": {
+                        "id": "Minimart",
+                        "en": "Minimart"
+                    },
+                    "description": {
+                        "id": "Bayar paket pilihan Anda di Minimart terdekat",
+                        "en": "Pay for the package of your choice at the nearest Minimart"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=minimart",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                }
+            ]
+        },
+        {
+            "name": {
+                "id": "Bayar di Vending Machine",
+                "en": "Pay at Vending Machine"
+            },
+            "child": [
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/Sruput%20Coffee.png",
+                    "title": {
+                        "id": "Sruput Cafe",
+                        "en": "Sruput Cafe"
+                    },
+                    "description": {
+                        "id": "Lakukan pembayaran di Sruput Cafe",
+                        "en": "Make payment at Sruput Cafe"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=sruputcafe",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/Shell_0.png",
+                    "title": {
+                        "id": "Shell",
+                        "en": "Shell"
+                    },
+                    "description": {
+                        "id": "Lakukan pembayaran di Shell",
+                        "en": "Make payments in Shell"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=shell",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/Recharge.png",
+                    "title": {
+                        "id": "Recharge",
+                        "en": "Recharge"
+                    },
+                    "description": {
+                        "id": "Lakukan pembayaran di ReCharge Station",
+                        "en": "Make payment at ReCharge Station"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=recharge",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/Transjakarta.png",
+                    "title": {
+                        "id": "Transjakarta",
+                        "en": "Transjakarta"
+                    },
+                    "description": {
+                        "id": "Lakukan pembayaran di Transjakarta",
+                        "en": "Make payment at Transjakarta"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=transjakarta",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                }
+            ]
+        },
+        {
+            "name": {
+                "id": "Bayar di Aplikasi",
+                "en": "Pay in App"
+            },
+            "child": [
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/Line.png",
+                    "title": {
+                        "id": "LINE",
+                        "en": "LINE"
+                    },
+                    "description": {
+                        "id": "Aktifkan pilihan paket terbaik di aplikasi LINE",
+                        "en": "Activate the best package options in the LINE app"
+                    },
+                    "targetURL": "https://liff.line.me/1655105216-XMlNdGoj?action=data?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/Whatsapp.png",
+                    "title": {
+                        "id": "WhatsApp",
+                        "en": "WhatsApp"
+                    },
+                    "description": {
+                        "id": "Aktifkan pilihan paket terbaik di aplikasi WhatsApp",
+                        "en": "Activate the best package selection in the WhatsApp application"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=whatsapp&embed=on",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/Shopee.png",
+                    "title": {
+                        "id": "Shopee",
+                        "en": "Shopee"
+                    },
+                    "description": {
+                        "id": "Aktifkan pilihan paket terbaik di aplikasi Shopee",
+                        "en": "Activate the best package selection in the Shopee app"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=shopee-app&embed=on",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/Gamefinity.png",
+                    "title": {
+                        "id": "Gamefinity",
+                        "en": "Gamefinity"
+                    },
+                    "description": {
+                        "id": "Aktifkan pilihan paket terbaik di Gamefinity",
+                        "en": "Activate the best package options on Gamefinity"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=gamefinity",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                }
+            ]
+        },
+        {
+            "name": {
+                "id": "Bayar di Device Retailer",
+                "en": "Pay at Device Retailer"
+            },
+            "child": [
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/selularshop.png",
+                    "title": {
+                        "id": "Selular Shop",
+                        "en": "Selular Shop"
+                    },
+                    "description": {
+                        "id": "Bayar paket di Selular shop",
+                        "en": "Pay for the package at the Cellular shop"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o/?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=selularshop",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/okeshop.png",
+                    "title": {
+                        "id": "Okeshop",
+                        "en": "Okeshop"
+                    },
+                    "description": {
+                        "id": "Bayar paket di Okeshop",
+                        "en": "Pay for the package at Okeshop"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=okeshop",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/globalteleshop.png",
+                    "title": {
+                        "id": "Global Teleshop",
+                        "en": "Global Teleshop"
+                    },
+                    "description": {
+                        "id": "Bayar paket di Global Teleshop",
+                        "en": "Pay for packages at Global Teleshop"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=globalteleshop",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon": "https://www.telkomsel.com/sites/default/files/2022-06/point2000.png",
+                    "title": {
+                        "id": "Point2000",
+                        "en": "Point2000"
+                    },
+                    "description": {
+                        "id": "Bayar paket di Point2000",
+                        "en": "Pay for the package at Point2000"
+                    },
+                    "targetURL": "https://www.telkomsel.com/shops/channel/o2o?utm_source=wec&utm_medium=store&utm_campaign=service-list&payment=point2000",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                }
+            ]
+        }
+    ]
+}
+

@@ -1,0 +1,23 @@
+version: "3.4"
+ 
+services:
+  rabbit:
+    image: "rabbitmq:3.8.3-management-alpine"
+    ports:
+      - "5672:5672"
+      - "15671:15671"
+      - "15672:15672"
+    volumes:
+      - ./cert:/cert
+      - ./data/mnesia:/var/lib/rabbitmq/mnesia
+      - ./log:/var/log/rabbitmq
+      - ./config/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - /etc/hosts:/etc/hosts
+    networks:
+      - rabbitmq_go_net
+
+networks:
+  rabbitmq_go_net:
+    driver: bridge
+testtest
+dd

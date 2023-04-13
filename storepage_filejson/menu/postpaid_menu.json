@@ -1,0 +1,82 @@
+{
+    "data" : [
+        {
+            "name" : "Tagihan",
+            "child" : [
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-03/Experience%20Program.png",
+                    "title" : "Cek Detail Tagihan",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://google.com",
+                    "type" : ["postpaid"]
+                },
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-03/Bill.png",
+                    "title" : "Riwayat Tagihan",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://google.com",
+                    "type" : ["postpaid"]
+                }
+            ]
+        },
+        {
+            "name" : "Transaksi",
+            "child" : [
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-03/Transaction.png",
+                    "title" : "Riwayat Transaksi",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://google.com",
+                    "type" : ["postpaid"]
+                },
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-03/Wallet.png",
+                    "title" : "Riwayat Pembayaran",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://google.com",
+                    "type" : ["postpaid"]
+                }
+            ]
+        },
+        {
+            "name" : "Paket Internet",
+            "child" : [
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-03/Usage.png",
+                    "title" : "Limit Domestik",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://google.com",
+                    "type" : ["postpaid"]
+                },
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-03/Loyalty%20Points.png",
+                    "title" : "Kelola Poin Loyalitas",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://google.com",
+                    "type" : ["postpaid"]
+                },
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-03/Internet.png",
+                    "title" : "Cek Detail Internet",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://google.com",
+                    "type" : ["postpaid"]
+                },
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-03/Package.png",
+                    "title" : "Paket Add-On",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://google.com",
+                    "type" : ["postpaid"]
+                },
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-03/Gift%20Box.png",
+                    "title" : "Paket Hadiah",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://google.com",
+                    "type" : ["postpaid"]
+                }
+            ]
+        }
+    ]
+}

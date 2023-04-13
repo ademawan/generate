@@ -1,0 +1,51 @@
+{
+        "data": [{
+                "name": {
+                        "id": "Menu Halo",
+                        "en": "Halo Menu"
+                },
+                "child": [{
+                                "icon": "https://43.255.196.44/sites/default/files/2022-05/svg--registrasi-halo-32p.svg",
+                                "title": {
+                                        "id": "Migrasi ke Halo",
+                                        "en": "Migration to Halo"
+                                },
+                                "description": {
+                                        "id": "Lorem ipsum dolor sit amet",
+                                        "en": "Lorem ipsum dolor sit amet"
+                                },
+                                "targetURL": "https://tdwpreweb.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list&_ga=2.17306617.1938750051.1657504897-797215751.1639646516",
+                                "type": ["login & nonlogin"],
+                                "type_user":"default"
+                        },
+                        {
+                                "icon": "https://43.255.196.44/sites/default/files/2022-05/svg-migrasi-halo-32p.svg",
+                                "title": {
+                                        "id": "Aktivasi Halo Online",
+                                        "en": "Hello Online Activation"
+                                },
+                                "description": {
+                                        "id": "Lorem ipsum dolor sit amet",
+                                        "en": "Lorem ipsum dolor sit amet"
+                                },
+                                "targetURL": "https://tdwpreweb.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list&_ga=2.17306617.1938750051.1657504897-797215751.1639646516",
+                                "type": ["login & nonlogin"],
+                                "type_user":"default"
+                        },
+                        {
+                                "icon": "https://43.255.196.44/sites/default/files/2022-05/svg--bundling-32p.svg",
+                                "title": {
+                                        "id": "Bundling Program",
+                                        "en": "Bundling Program"
+                                },
+                                "description": {
+                                        "id": "Lorem ipsum dolor sit amet",
+                                        "en": "Lorem ipsum dolor sit amet"
+                                },
+                                "targetURL": "https://tdwpreweb.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list&_ga=2.17306617.1938750051.1657504897-797215751.1639646516",
+                                "type": ["login & nonlogin"],
+                                "type_user":"default"
+                        }
+                ]
+        }]
+}

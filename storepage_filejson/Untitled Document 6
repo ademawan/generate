@@ -1,0 +1,165 @@
+[apps@tselprtlpapp3 menu]$ cat halo_postpaid_menu.json
+{
+    "data" : [
+        {
+            "name" : {
+                "id": "Informasi Pemakaian & Tagihan",
+                "en": "Usage and Billing Information"
+            },
+            "child" : [
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-05/detail-internet-24.png",
+                    "title" : {
+                        "id": "Cek Detail Internet",
+                        "en": "Check Internet Details"
+                    },
+                    "description" : {
+                        "id": "Cek detail paket, rincian kuota, sisa kuota, dan masa berakhir paket Anda.",
+                        "en": "Check package details, quota details, remaining quota, and the expiration date of your package."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/detail-quota?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-05/detail-tagihan-24.png",
+                    "title" : {
+                        "id": "Cek Detail Tagihan",
+                        "en": "Check Billing Details"
+                    },
+                    "description" : {
+                        "id": "Cek detail rincian tagihan dan pemakaian Halo Anda.",
+                        "en": "Check your Halo billing and usage details."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-05/riwayat-tagihan-24.png",
+                    "title" : {
+                        "id": "Detail & Riwayat Tagihan",
+                        "en": "Billing Details & History"
+                    },
+                    "description" : {
+                        "id": "Lihat riwayat tagihan Halo Anda selama 3 bulan terakhir.",
+                        "en": "View your Halo billing history for the last 3 months."
+                    },
+                    "targetURL" : "https://www.telkomsel.com/shops/store/telkomsel-halo/billing-details",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                }
+            ]
+        },
+        {
+            "name" : {
+                "id": "Beli/Ubah Paket Halo",
+                "en": "Buy/Change Halo Packages"
+            },
+            "child" : [
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-05/ubahpaketbulanan-24.png",
+                    "title" : {
+                        "id": "Ubah Paket Bulanan Utama",
+                        "en": "Change Main Monthly Plan"
+                    },
+                    "description" : {
+                        "id": "Ubah atau upgrade paket bulanan utama ke pilihan paket Halo sesuai kebutuhan Anda.",
+                        "en": "Change or upgrade the main monthly plan to the Halo package option according to your needs."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/app/packages?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-05/ubah-limit-24.png",
+                    "title" : {
+                        "id": "Ubah Batas Pemakaian Domestik",
+                        "en": "Change Domestic Usage Limit"
+                    },
+                    "description" : {
+                        "id": "Upgrade batas pemakaian domestik (CLS) bulanan sesuai kebutuhan Anda.",
+                        "en": "Upgrade your monthly domestic usage limit (CLS) to suit your needs."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/app/billing/upgrade-cls?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-05/addonpackage-24.png",
+                    "title" : {
+                        "id": "Paket Tambahan",
+                        "en": "Additional Packages"
+                    },
+                    "description" : {
+                        "id": "Pilih paket tambahan untuk internet, telepon, SMS, dan hiburan agar konektivitas tetap terjaga.",
+                        "en": "Choose additional packages for internet, phone, SMS, and entertainment to maintain connectivity."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/app/packages?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-05/pakethadiah-24.png",
+                    "title" : {
+                        "id": "Paket Hadiah",
+                        "en": "Gift Package"
+                    },
+                    "description" : {
+                        "id": "Kirim hadiah pulsa dan paket ke pelanggan Prabayar atau bayarkan tagihan pelanggan Halo lain.",
+                        "en": "Send credit gifts and packages to Prepaid customers or pay bills for other Halo customers."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/app/gifting?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                }
+            ]
+        },
+        {
+            "name" : {
+                "id": "Telkomsel Halo Rewards",
+                "en": "Telkomsel Halo Rewards"
+            },
+            "child" : [
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-05/loyalti-24.png",
+                    "title" : {
+                        "id": "Kelola Poin Loyalitas",
+                        "en": "Manage Loyalty Points"
+                    },
+                    "description" : {
+                        "id": "Kelola Telkomsel POIN, tukar dan dapatkan berbagai penawaran ekslusif dan menarik.",
+                        "en": "Manage Telkomsel POIN, exchange and get various exclusive and attractive offers."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/app/rewards-page?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                }
+            ]
+        },
+        {
+            "name" : {
+                "id": "Informasi Program",
+                "en": "Program Information"
+            },
+            "child" : [
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-05/bundlingprogram-24.png",
+                    "title" : {
+                        "id": "Halo Device Program",
+                        "en": "Hello Device Programs"
+                    },
+                    "description" : {
+                        "id": "Miliki smartphone pilihan dengan Telkomsel Halo lebih untung dengan Halo Unlimited Device Plan.",
+                        "en": "Having a smartphone of choice with Telkomsel Halo is more profitable with the Halo Unlimited Device Plan."
+                    },
+                    "targetURL" : "https://www.telkomsel.com/halodeviceplan?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                }
+            ]
+        }
+    ]
+}
+
+

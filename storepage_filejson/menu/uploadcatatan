@@ -1,0 +1,24 @@
+//untuk compess folder to file tar.gz
+tar -zcvf menu1.tar.gz menu
+
+//untuk ambil file from server
+scp zulfikarff@10.49.15.231:/tmp/menu.tar.gz .
+
+//untuk extrak file tar.gz
+tar -xf menu.tar.gz
+
+//untuk melihat isi file tar.gz
+tar -tf myfolder.tar.gz
+
+scp -oKexAlgorithms=+diffie-hellman-group1-sha1 ./go.v1.15.8.telkomsel-users-service:v1.2.23.tar.gz zulfikarff@10.2.116.250:/tmp
+scp ./menu1.tar.gz zulfikar_f_fadhila@telkomsel.co.id@10.2.230.250:/tmp
+scp ./menu1.tar.gz zulfikarff@10.49.15.231:/tmp
+sudo chmod 777 menu1.tar.gz
+cp ./menu1.tar.gz /apps/telkomsel-wec-store-page/file
+
+//untuk rename folder
+mv menu menubak20230130
+
+tar -xf menu1.tar.gz
+
+docker-compose down && docker-compose up -d

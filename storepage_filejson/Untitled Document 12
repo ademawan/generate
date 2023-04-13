@@ -1,0 +1,159 @@
+[apps@tselprtlpapp3 menu]$ cat telkomsel_halo_postpaid_menu.json
+{
+    "data" : [
+        {
+            "name" :{
+                "id": "Tagihan",
+                "en": "Tagihan"
+            },
+            "child" : [
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-04/svg--cek-detail-tagihan-32p.svg",
+                    "title" :{
+                        "id": "Cek Detail Tagihan",
+                        "en": "Cek Detail Tagihan"
+                    },
+                    "description" :{
+                        "id": "Cek detail rincian tagihan Halo Anda setiap akhir periode tagihan.",
+                        "en": "Cek detail rincian tagihan Halo Anda setiap akhir periode tagihan."
+                    },
+                    "targetURL1" : "https://my.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+		    "targetURL": "https://my.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list&_ga=2.17306617.1938750051.1657504897-797215751.1639646516",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-04/svg--riwayat-tagihan-32p.svg",
+                    "title" :{
+                        "id": "Riwayat Tagihan",
+                        "en": "Riwayat Tagihan"
+                    },
+                    "description" : {
+                        "id": "Cek/lihat riwayat tagihan Halo Anda selama 3 bulan terakhir.",
+                        "en": "Cek/lihat riwayat tagihan Halo Anda selama 3 bulan terakhir."
+                    },
+                    "targetURL1" : "https://my.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+		    "targetURL": "https://my.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list&_ga=2.17306617.1938750051.1657504897-797215751.1639646516",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-04/svg--riwayat-pembayaran.svg",
+                    "title" :{
+                        "id": "Riwayat Pembayaran",
+                        "en": "Riwayat Pembayaran"
+                    }, 
+                    "description" :{
+                        "id": "Cek/lihat riwayat pembayaran tagihan Halo Anda selama 3 bulan terakhir.",
+                        "en": "Cek/lihat riwayat pembayaran tagihan Halo Anda selama 3 bulan terakhir."
+                    },
+                    "targetURL1" : "https://my.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+		    "targetURL": "https://my.telkomsel.com/app/billing?utm_source=wec&utm_medium=store&utm_campaign=service-list&_ga=2.17306617.1938750051.1657504897-797215751.1639646516",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                }
+            ]
+        },
+        {
+            "name" : {
+                "id": "Transaksi",
+                "en": "Transaksi"
+            },
+            "child" : [
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-04/svg--migrasi-paket-utama-32p.svg",
+                    "title" : {
+                        "id":"Migrasi Paket Bulanan Utama",
+                        "en":"Migrasi Paket Bulanan Utama"
+                    },
+                    "description" :{
+                        "id": "Pindah atau upgrade paket bulanan utama ke berbagai pilihan paket Halo Unlimited.",
+                        "en": "Pindah atau upgrade paket bulanan utama ke berbagai pilihan paket Halo Unlimited."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/app/packages?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-04/svg--ubah-batas-pemakaian-32p.svg",
+                    "title" : {
+                        "id":"Perubahan Batas Pemakaian Domestik",
+                        "en":"Perubahan Batas Pemakaian Domestik"
+                    },
+                    "description" : {
+                        "id":"Upgrade batas pemakaian domestik (CLS) bulanan sesuai kebutuhan Anda.",
+                        "en":"Upgrade batas pemakaian domestik (CLS) bulanan sesuai kebutuhan Anda."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/app/billing/upgrade-cls?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-04/svg--kelola-poin-32p.svg",
+                    "title" : {
+                        "id":"Kelola Poin Loyalitas",
+                        "en":"Kelola Poin Loyalitas"
+                    },
+                    "description" : {
+                        "id":"Kelola Telkomsel Poin, tukar dan dapatkan berbagai penawaran ekslusif/menarik Telkomsel Poin.",
+                        "en":"Kelola Telkomsel Poin, tukar dan dapatkan berbagai penawaran ekslusif/menarik Telkomsel Poin."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/app/rewards-page?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                }
+            ]
+        },
+        {
+            "name" :{
+                "id": "Paket Internet",
+                "en": "Paket Internet"
+            },
+            "child" : [
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-04/svg--cek-detail-internet-32p.svg",
+                    "title" : {
+                        "id": "Cek Detail Internet",
+                        "en": "Cek Detail Internet"
+                    },
+                    "description" : {
+                        "id": "Cek detail paket beserta rincian kuota, sisa kuota, dan masa berakhir paket.",
+                        "en": "Cek detail paket beserta rincian kuota, sisa kuota, dan masa berakhir paket."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/detail-quota?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-04/svg--paket-tambahan-32p.svg",
+                    "title" : {
+                        "id": "Paket Tambahan",
+                        "en": "Paket Tambahan"
+                    },
+                    "description" : {
+                        "id": "Pilih dan nikmati pilihan paket tambahan untuk internet, telepon, SMS, dan hiburan agar konektivitas tetap terjaga.",
+                        "en": "Pilih dan nikmati pilihan paket tambahan untuk internet, telepon, SMS, dan hiburan agar konektivitas tetap terjaga."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/app/packages?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-04/svg--paket-hadiah-32p.svg",
+                    "title" :{
+                        "id": "Gift Package",
+                        "en": "Gift Package"
+                    },
+                    "description" :{
+                        "id": "Kirim hadiah pulsa, paket, atau bayarkan tagihan ke pelanggan Telkomsel lain.",
+                        "en": "Kirim hadiah pulsa, paket, atau bayarkan tagihan ke pelanggan Telkomsel lain."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/app/gifting?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type" : ["login", "Halo"],
+                    "type_user":"Postpaid"
+                }
+            ]
+        }
+    ]
+}
+

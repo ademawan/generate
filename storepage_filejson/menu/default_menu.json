@@ -1,0 +1,30 @@
+{
+    "data" : [
+        {
+            "name" : "",
+            "child" : [
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-03/Sim%20Card.png",
+                    "title" : "Migrasi ke Halo",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://my.telkomsel.com/halo",
+                    "type" : ["default"]
+                },
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-03/Roaming.png",
+                    "title" : "Aktivasi Halo Online",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "",
+                    "type" : ["default"]
+                },
+                {
+                    "icon" : "https://43.255.196.44/sites/default/files/2022-03/Device%20mobile.png",
+                    "title" : "Bundling Program",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "targetURL" : "https://google.com",
+                    "type" : ["default"]
+                }
+            ]
+        }
+    ]
+}

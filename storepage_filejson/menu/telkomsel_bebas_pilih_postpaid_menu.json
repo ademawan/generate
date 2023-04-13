@@ -1,0 +1,79 @@
+{
+	"data": [{
+		"name": {
+			"id": "Halo Postpaid Menu",
+			"en": "Halo Postpaid Menu"
+		},
+		"child": [{
+				"icon": "https://43.255.196.44/sites/default/files/2022-03/Sim%20Card.png",
+				"title": {
+					"id": "Migrasi ke Halo",
+					"en": "Migration to Halo"
+				},
+				"description": {
+					"id": "Lorem ipsum dolor sit amet",
+					"en": "Lorem ipsum dolor sit amet"
+				},
+				"targetURL": "https://my.telkomsel.com/halo",
+				"type" : ["login", "Halo"],
+				"type_user":"Postpaid"
+			},
+			{
+				"icon": "https://43.255.196.44/sites/default/files/2022-03/Roaming.png",
+				"title": {
+					"id": "Aktivasi Halo Online",
+					"en": "Halo Online Activation"
+				},
+				"description": {
+					"id": "Lorem ipsum dolor sit amet",
+					"en": "Lorem ipsum dolor sit amet"
+				},
+				"targetURL": "",
+				"type" : ["login", "Halo"],
+				"type_user":"Postpaid"
+			},
+			{
+				"icon": "https://43.255.196.44/sites/default/files/2022-03/Device%20mobile.png",
+				"title": {
+					"id": "Program Bundling",
+					"en": "Bundling Program"
+				},
+				"description": {
+					"id": "Lorem ipsum dolor sit amet",
+					"en": "Lorem ipsum dolor sit amet"
+				},
+				"targetURL": "https://google.com",
+				"type" : ["login", "Halo"],
+				"type_user":"Postpaid"
+			},
+			{
+				"icon": "https://43.255.196.44/sites/default/files/2022-03/Roaming.png",
+				"title": {
+					"id": "Paket",
+					"en": "Package"
+				},
+				"description": {
+					"id": "Lorem ipsum dolor sit amet",
+					"en": "Lorem ipsum dolor sit amet"
+				},
+				"targetURL": "",
+				"type" : ["login", "Halo"],
+				"type_user":"Postpaid"
+			},
+			{
+				"icon": "https://43.255.196.44/sites/default/files/2022-03/Device%20mobile.png",
+				"title": {
+					"id": "Bundling Device",
+					"en": "Bundling Device"
+				},
+				"description": {
+					"id": "Lorem ipsum dolor sit amet",
+					"en": "Lorem ipsum dolor sit amet"
+				},
+				"targetURL": "https://google.com",
+				"type" : ["login", "Halo"],
+				"type_user":"Postpaid"
+			}
+		]
+	}]
+}

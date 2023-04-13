@@ -1,0 +1,49 @@
+{
+	"data": [{
+		"name": "Halo Prepaid Menu",
+		"child": [{
+				"icon": "https://43.255.196.44/sites/default/files/2022-03/Device%20mobile.png",
+				"title": {
+					"id": "Program Bundling",
+					"en": "Bundling Program"
+				},
+				"description": {
+					"id": "Lorem ipsum dolor sit amet",
+					"en": "Lorem ipsum dolor sit amet"
+				},
+				"targetURL": "https://google.com",
+				"type": ["login", "PraBayar"],
+				"type_user":"Prepaid"
+			},
+			{
+				"icon": "https://43.255.196.44/sites/default/files/2022-03/Roaming.png",
+				"title": {
+					"id": "Paket",
+					"en": "Package"
+				},
+				"description": {
+					"id": "Lorem ipsum dolor sit amet",
+					"en": "Lorem ipsum dolor sit amet"
+				},
+
+				"targetURL": "",
+				"type": ["login", "PraBayar"],
+				"type_user":"Prepaid"
+			},
+			{
+				"icon": "https://43.255.196.44/sites/default/files/2022-03/Device%20mobile.png",
+				"title": {
+					"id": "Bundling Device",
+					"en": "Bundling Device"
+				},
+				"description": {
+					"id": "Lorem ipsum dolor sit amet",
+					"en": "Lorem ipsum dolor sit amet"
+				},
+				"targetURL": "https://google.com",
+				"type": ["login", "PraBayar"],
+				"type_user":"Prepaid"
+			}
+		]
+	}]
+}

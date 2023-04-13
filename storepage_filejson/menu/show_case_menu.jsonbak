@@ -1,0 +1,71 @@
+{
+	"data": [
+
+		{
+			"name": {
+				"id": "Layanan utama",
+				"en": "Main Service"
+			},
+			"child": [{
+					"icon": "https://www.telkomsel.com/sites/default/files/2022-08/1_sim_card.png",
+					"title": {
+						"id": "Beli SIM Card Baru",
+						"en": "Buy New SIM Card"
+					},
+					"description": {
+						"id": "Beli dan Pilih Nomor Baru Telkomsel Anda disini",
+						"en": "Buy and choose your new Telkomsel number here"
+					},
+					"targetURL": "https://my.telkomsel.com/starterpack/landing-page?utm_source=wec&utm_medium=store&utm_campaign=service-list&_ga=2.116816774.1216366366.1659925143-797215751.1639646516",
+					"type": ["default"]
+				},
+				{
+					"icon": "https://www.telkomsel.com/sites/default/files/2022-08/2_daftar_telkomsel.png",
+					"title": {
+						"id": "Ganti Kartu dan Migrasi ke 4G",
+						"en": "SIM Card Replacement"
+					},
+					"description": {
+						"id": "Layanan untuk kartu hilang dan beralih ke SIM card 4G",
+						"en": "Lost SIM card replacement and switching to 4G SIM card"
+					},
+					"targetURL": "https://www.telkomsel.com/support/ganti-kartu-di-grapari?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+					"type": ["default"]
+				}
+			]
+		},
+	  {
+                    "name": {
+                        "id": "Layanan Migrasi",
+                        "en": "Migration Service"
+                    },
+                    "child": [{
+                            "icon": "https://www.telkomsel.com/sites/default/files/2022-08/3_ganti_kartu.png",
+                            "title": {
+                                "id": "Daftar Telkomsel Halo",
+                                "en": "Register for Telkomsel Halo"
+                            },
+                            "description": {
+                                "id": "Jadi pelanggan pascabayar dengan beragam kemudahan di jaringan superior",
+                                "en": "Become a postpaid customer with various conveniences on a superior network"
+                            },
+                            "targetURL": "https://my.telkomsel.com/psb/dapatkan-nomor-pascabayar?utm_source=wec&utm_medium=store&utm_campaign=service-liste&_ga=2.138297136.1216366366.1659925143-797215751.1639646516",
+                            "type": ["default"]
+                        },
+                        {
+                            "icon": "https://www.telkomsel.com/sites/default/files/2022-08/3_ganti_kartu.png",
+                            "title": {
+                                "id": "Daftar Telkomsel PraBayar",
+                                "en": "Register for Telkomsel PraBayar"
+                            },
+                            "description": {
+                                "id": "Temukan beragam pilihan paket dengan jaringan terluas dan layanan hiburan terlengkap melalui layanan Telkomsel",
+                                "en": "Discover various exciting packages with the widest network and maximum entertainment from Telkomsel"
+                            },
+                            "targetURL": "https://my.telkomsel.com/starterpack/landing-page-prepaid?utm_source=wec&utm_medium=web&utm_campaign=grapari-online-store",
+                            "type": ["default"]
+                        }
+                    ]
+                }
+	]
+}

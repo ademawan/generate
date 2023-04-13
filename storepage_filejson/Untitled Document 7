@@ -1,0 +1,43 @@
+
+[apps@tselprtlpapp3 menu]$ cat halo_prepaid_menu.json
+{
+    "data" : [
+        {
+            "name" : {
+                "id": "Berlangganan Halo",
+                "en": "Subscribe Hello"
+            },
+            "child" : [
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-05/registrasihalo-24.png",
+                    "title" : {
+                        "id": "Registrasi Halo",
+                        "en": "Hello Registration"
+                    },
+                    "description" : {
+                        "id": "Daftar Telkomsel Halo secara online dengan cepat dan mudah.",
+                        "en": "Register for Telkomsel Halo online quickly and easily."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/psb/dapatkan-nomor-pascabayar?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type": ["login & nonlogin"],
+                    "type_user":"default"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-05/migrasihalo-24.png",
+                    "title" : {
+                        "id": "Migrasi ke Halo",
+                        "en": "Migrate to Halo"
+                    },
+                    "description" : {
+                        "id": "Beralih dari prabayar ke Telkomsel Halo secara online tanpa perlu mengganti nomor.",
+                        "en": "Switch from prepaid to Telkomsel Halo online without the need to change numbers."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/migrate/migrate-to-halo?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type": ["login & nonlogin"],
+                    "type_user":"default"
+                }
+            ]
+        }
+    ]
+}
+

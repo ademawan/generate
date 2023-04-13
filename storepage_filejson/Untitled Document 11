@@ -1,0 +1,52 @@
+[apps@tselprtlpapp3 menu]$ cat telkomsel_halo_menu.json
+{
+    "data" : [
+        {
+            "name" : {
+                "id": "",
+                "en": ""
+            },
+            "child" : [
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-04/svg--registrasi-halo-32p.svg",
+                    "title" :{
+                        "id": "Daftar Halo",
+                        "en": "Registration Halo"
+                    },
+                    "description" : {
+                        "id": "Daftar Telkomsel Halo secara online dengan cepat dan mudah.",
+                        "en": "Register for Telkomsel Halo online quickly and easily."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/psb/dapatkan-nomor-pascabayar?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-04/svg-migrasi-halo-32p.svg",
+                    "title" :{
+                        "id": "Migrasi ke Halo",
+                        "en": "Migration to Halo"
+                    },
+                    "description" : {
+                        "id": "Beralih dari prabayar ke pascabayar Telkomsel Halo secara online.",
+                        "en": "Register for Telkomsel Halo online quickly and easily."
+                    },
+                    "targetURL" : "https://my.telkomsel.com/migrate/migrate-to-halo?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                },
+                {
+                    "icon" : "https://www.telkomsel.com/sites/default/files/2022-04/svg--bundling-32p.svg",
+                    "title" : "Bundling Program",
+                    "description" : {
+                        "id": "Miliki smartphone pilihan dengan Halo Unlimited Device Plan.",
+                        "en": "Register for Telkomsel Halo online quickly and easily."
+                    },
+                    "targetURL" : "https://www.telkomsel.com/halodeviceplan?utm_source=wec&utm_medium=store&utm_campaign=service-list",
+                    "type": ["login & nonlogin"],
+                "type_user":"default"
+                }
+            ]
+        }
+    ]
+}
