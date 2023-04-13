@@ -1,0 +1,26 @@
+request.Header.Add("Accept", "application/json")
+	request.Header.Add("User-Agent", "application/json")
+	request.Header.Add("x-signature", signature)
+	request.Header.Add("api_key", os.Getenv("API_KEY"))
+
+
+	API_KEY=eedfevw8q7rym4zhdsa64cma
+SECRET_KEY=CSkjSURNZA
+TAG=REV_MTD,REV_M1,REV_M2,LYLTY_TIER
+CHANNEL=b0
+
+
+	curl --insecure --header "Accept:application/json" --header "User-Agent:application/json" --header "x-signature:3b2132dde0708041068dfcdb4dc3bf17" --header "api_key:eedfevw8q7rym4zhdsa64cma" https://api.digitalcore.telkomsel.co.id/preprod-web/scrt/esb/v1/scv?channel=b0&service_id=081221997456&tag=REV_MTD,REV_M1,REV_M2,LYLTY_TIER
+	?channel=%s&service_id=%s&tag=
+
+	curl -X GET -H 'x-msisdn: 628118110754' -H 'TRANSACTIONID: A301180116194955068818530' -H 'CHANNELID: b0' -H 'api_key: eedfevw8q7rym4zhdsa64cma' -H 'x-signature:2ff28247d93ca87c01ba07939df3f97f' -H 'Content-Type: application/json' -H 'Accept: application/json' '	https://api.digitalcore.telkomsel.co.id/preprod-web/scrt/subscriber/profiles/6281221997456?profileitems=customer_type' -ik
+
+	https://api.digitalcore.telkomsel.co.id/preprod-web/scrt/subscriber/profiles/6281221997456?profileitems=customer_type
+
+
+
+   curl --insecure --header "Accesstoken:eyJ0eXAiOiJKV1QiLCJraWQiOiJ3VTNpZklJYUxPVUFSZVJCL0ZHNmVNMVAxUU09IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIwMTIxYTE2Ni1jMjQwLTQ0NjQtYjhmOS01MjNkMjk2NjA2MGMiLCJjdHMiOiJPQVVUSDJfR1JBTlRfU0VUIiwiYXV0aF9sZXZlbCI6MCwiYXVkaXRUcmFja2luZ0lkIjoiZDUwZGM4ZjItNDIyZC00OGYwLTlhMDYtNWM3NDBjNzJjNzA3LTE2NjM1ODkiLCJpc3MiOiJodHRwczovL2NpYW1hbXByZXBkYXBwLmNpYW0udGVsa29tc2VsLmNvbToxMDAwMy9vcGVuYW0vb2F1dGgyL3RzZWwvd2VjL3dlYiIsInRva2VuTmFtZSI6ImFjY2Vzc190b2tlbiIsInRva2VuX3R5cGUiOiJCZWFyZXIiLCJhdXRoR3JhbnRJZCI6InUzd0I5dXVjUXEySHVtV2ZsS1dRZG9LRUtVby5GMUM4RGk2RFdIajBFTTRBZVBvdm5laU1YazQiLCJub25jZSI6InRydWUiLCJhdWQiOiJiMzkzNjE4NDM2ZTUxMWVjOGQzZDAyNDJhYzEzMDAwMyIsIm5iZiI6MTY2ODQ5NDEzNiwiZ3JhbnRfdHlwZSI6ImF1dGhvcml6YXRpb25fY29kZSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiXSwiYXV0aF90aW1lIjoxNjY4NDk0MTM1LCJyZWFsbSI6Ii90c2VsL3dlYy93ZWIiLCJleHAiOjE2Njg0OTUwMzYsImlhdCI6MTY2ODQ5NDEzNiwiZXhwaXJlc19pbiI6OTAwLCJqdGkiOiJ1M3dCOXV1Y1FxMkh1bVdmbEtXUWRvS0VLVW8uVWRPU3ZvNlE0OWpIeTNmMVpXcnhCYXR1bE9nIn0.bqdCweixnE-_p1QXQZ0JrSukP_5_9G4DZ7VID7ETieV6a9z3efs17HnQROfxviQtXusIRx40bky5XVrVsCaF9829iS2jRkTl_PY8BuIEOXMKv8tqzIAosE6wVF34-BJYGroS2TILbkYlXhXoYMXUtIRMs4ScVF2TB72yRZR90UBlXRFaJfMtnxqz40DJAAaOzN0RC_yYfNEOcYkDcTTcLOvyxXaPT_t6zWwBRlUngVHZ5U3s1Uzh0qq1jDZTmURJB077pR97p_e_mx5HhAneqv0StuNN2GFUCni0Df8miGVYCe_UBShCCkM-IIqjPmz5rJWDdyfMkgoeQQPSIyiIsQ" --header "Content-Type:application/json" --header "Accept:application/json", --request POST --data '{"team_id":"221114134309396954930"}' https://43.255.196.44/api/merchant-panel/264/users/2694a712-66ca-41e0-a14b-253a96815e4b/update
+
+
+   =================prod
+   	curl -X GET -H 'x-msisdn: 628118110754' -H 'TRANSACTIONID: A301180116194955068818530' -H 'CHANNELID: b0' -H 'api_key: 4wj7qbrzr8yv57qjby4c9wg7' -H 'x-signature:3c0bca80616d46aac8feaea21c2e22f5' -H 'Content-Type: application/json' -H 'Accept: application/json' '	https://api.digitalcore.telkomsel.co.id/scrt/subscriber/profiles/628118110754?profileitems=customer_type' -ik

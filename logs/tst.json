@@ -1,0 +1,267 @@
+
+
+//cat payment_wna.log | grep RG221019152231339522310
+
+//time="2022-10-19T15:22:42+07:00" level=info event=validate method=GET msisdn= payment_type= request="<nil>" 
+
+//response="
+{
+    "wna_id":"RE221019152231339522310",
+    "trx_id":"RG221019152231339522310",
+    "order_id_esb":"FRb02210190322313885a8140",
+    "user_id":"",
+    "code":"W001221019152231798958710",
+    "device_id":"21123e2c-ce19-4075-ba0f-1399bbcce444",
+    "transaction_number":"",
+    "fullname":"Hendrik Tjabringa",
+    "gender":"",
+    "passport_number":"BT8BJ2J56",
+    "passport_id":"F0022210191522310290",
+    "nationality":"Netherlands",
+    "birthday":"05-06-1953",
+    "place_of_birth":"SLOCHTEREN",
+    "address":"SWISS-BELRESORT Watu JimbarnJl. Danau Tamblingan No.99A, Sanur,  Bali 80228",
+    "email":"tjabringa@hotmail.com",
+    "imei_id":"F0022210191522313320",
+    "imei_number_1":"354859095045267",
+    "imei_number_2":"",
+    "purchase_mode":"non cash",
+    "payment_method":"cc",
+    "payment_status":"pending",
+    "interaction_id":"",
+    "kip_id":"",
+    "case_id":"",
+    "item_name":"WNA Tourist Starter Pack 100rb",
+    "item_price":100000,
+    "description":"25GB of Data for 30 Days",
+    "sub_total_bill":100000,
+    "total_bill":100000,
+    "tax":0,
+    "discount":0,
+    "order_status":"new",
+    "status_order_co":"pending",
+    "created_at":"2022-10-19 15:22:31"
+ }"
+
+    
+//  response_time=6.217398ms status_code=200 transactionid= url="http://10.59.104.222:448/order/wna/RE221019152231339522310"
+// time="2022-10-19T15:22:42+07:00" level=info event=payment_wna method=POST msisdn= payment_type=finnet_cc 
+// request="
+{
+    "transaction":{
+        "transaction_id":"RG221019152231339522310",
+        "channel":"b0"},
+    "service":{
+        "service_id":"628111111111",
+        "funder_service_id":"628111111111"
+    },
+    "order":{
+        "order_type":"FR",
+        "element4":"b0test123",
+        "item_type":"prepaidwna",
+        "item_name":"WNA Tourist Starter Pack 100rb",
+        "session_token":"https://telkomsel.com/shops/preorder-wna/checkout/FRb02210190322313885a8140",
+        "redirect_url":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",
+        "redirect_url_failed":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",
+        "interface":"web",
+        "customer_info":{
+            "customer_name":"Hendrik Tjabringa",
+            "customer_email":"tjabringa@hotmail.com"},
+        "expiry":{
+            "duration":5000,
+            "uom":"second"},
+        "payment":{
+                "payment_method":"FINNET_CC",
+                "payment_amount":{
+                    "total_amount":100000,
+                    "product_fee":0,
+                    "delivery_fee":0}
+                },
+        "vas_recharge_info":{
+                "organization_code":"707002",
+                "element2":"jvchIAmNEkh2=",
+                "third_party_id":"NGRS_INTERNALTSEL",
+                "third_party_password":"kMhIAmNE4h8=",
+                "fund_source":"CC_VISA",
+                "delivery_channel":"5262"
+                }
+    }
+}
+
+
+response="{"transaction":{"transaction_id":"RG221019152231339522310",
+"channel":"b0",
+"status_code":"00000",
+"status_desc":"Success"},
+"deeplink_url":"https://live.finpay.id/pg/payment/card/access/81a22cd55bad8affdc6686b70d99060eb36aff56324fb08d5894942a9ab28afc"}n" 
+response_time=519.334289ms status_code=200 transactionid=RG221019152231339522310 url="https://api.digitalcore.telkomsel.co.id/scrt/esb/v2/online-orders/FRb02210190322313885a8140/payment"
+time="2022-10-19T15:26:20+07:00" level=info event=validate method=GET msisdn= payment_type= request="<nil>" 
+
+response="{
+    "wna_id":"RE221019152231339522310",
+    "trx_id":"RG221019152231339522310",
+    "order_id_esb":"FRb02210190322313885a8140",
+    "user_id":"",
+    "code":"W001221019152231798958710",
+    "device_id":"21123e2c-ce19-4075-ba0f-1399bbcce444",
+    "transaction_number":"",
+    "fullname":"Hendrik Tjabringa",
+    "gender":"",
+    "passport_number":"BT8BJ2J56",
+    "passport_id":"F0022210191522310290",
+    "nationality":"Netherlands",
+    "birthday":"05-06-1953",
+    "place_of_birth":"SLOCHTEREN",
+    "address":"SWISS-BELRESORT Watu JimbarnJl. Danau Tamblingan No.99A, Sanur,  Bali 80228",
+    "email":"tjabringa@hotmail.com",
+    "imei_id":"F0022210191522313320",
+    "imei_number_1":"354859095045267",
+    "imei_number_2":"",
+    "purchase_mode":"non cash",
+    "payment_method":"cc",
+    "payment_status":"pending",
+    "interaction_id":"",
+    "kip_id":"",
+    "case_id":"",
+    "item_name":"WNA Tourist Starter Pack 100rb",
+    "item_price":100000,
+    "description":"25GB of Data for 30 Days",
+    "sub_total_bill":100000,
+    "total_bill":100000,
+    "tax":0,
+    "discount":0,
+    "order_status":"new",
+    "status_order_co":"pending",
+    "created_at":"2022-10-19 15:22:31" 
+    }" 
+
+response_time=6.079192ms 
+status_code=200 
+transactionid= 
+url="http://10.59.104.222:448/order/wna/RE221019152231339522310"
+time="2022-10-19T15:26:20+07:00" 
+level=info event=payment_wna method=POST msisdn= payment_type=finnet_cc 
+request="{
+    "transaction":
+    {
+        "transaction_id":"RG221019152231339522310",
+        "channel":"b0"
+    },
+    "service":{
+        "service_id":"628111111111",
+        "funder_service_id":"628111111111" 
+    },
+    "order":
+    {
+        "order_type":"FR",
+        "element4":"b0test123",
+        "item_type":"prepaidwna",
+        "item_name":"WNA Tourist Starter Pack 100rb",
+        "session_token":"https://telkomsel.com/shops/preorder-wna/checkout/FRb02210190322313885a8140",
+        "redirect_url":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",
+        "redirect_url_failed":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",
+        "interface":"web",
+        "customer_info":{"customer_name":"Hendrik Tjabringa",
+        "customer_email":"tjabringa@hotmail.com"},
+        "expiry":{
+            "duration":5000,
+            "uom":"second"
+        },
+    "payment":
+    {
+        "payment_method":"FINNET_CC",
+        "payment_amount":
+        {
+            "total_amount":100000,
+            "product_fee":0,
+            "delivery_fee":0
+        }  
+    },
+"vas_recharge_info":{"organization_code":"707002",
+"element2":"jvchIAmNEkh2=",
+"third_party_id":"NGRS_INTERNALTSEL",
+"third_party_password":"kMhIAmNE4h8=",
+"fund_source":"CC_VISA",
+"delivery_channel":"5262"}}}" 
+
+
+response="
+{
+    "transaction":
+    {
+        "transaction_id":"RG221019152231339522310",
+        "channel":"b0",
+        "status_code":"30ERR01",
+
+        "status_desc":"Service Provider Error: Elisa - Invalid Parameter - Transaction_ID RG221019152231339522310 is already exist"    
+    }
+}n"
+
+response_time=82.741269ms status_code=400 transactionid=RG221019152231339522310 
+url="https://api.digitalcore.telkomsel.co.id/scrt/esb/v2/online-orders/FRb02210190322313885a8140/payment"
+time="2022-10-19T15:29:37+07:00" level=info event=validate method=GET msisdn= payment_type= request="<nil>" response="{"wna_id":"RE221019152231339522310",
+"trx_id":"RG221019152231339522310",
+"order_id_esb":"FRb02210190322313885a8140",
+"user_id":"",
+"code":"W001221019152231798958710",
+"device_id":"21123e2c-ce19-4075-ba0f-1399bbcce444",
+"transaction_number":"",
+"fullname":"Hendrik Tjabringa",
+"gender":"",
+"passport_number":"BT8BJ2J56",
+"passport_id":"F0022210191522310290",
+"nationality":"Netherlands",
+"birthday":"05-06-1953",
+"place_of_birth":"SLOCHTEREN",
+"address":"SWISS-BELRESORT Watu JimbarnJl. Danau Tamblingan No.99A, Sanur,  Bali 80228",
+"email":"tjabringa@hotmail.com",
+"imei_id":"F0022210191522313320",
+"imei_number_1":"354859095045267",
+"imei_number_2":"",
+"purchase_mode":"non cash",
+"payment_method":"cc",
+"payment_status":"pending",
+"interaction_id":"",
+"kip_id":"",
+"case_id":"",
+"item_name":"WNA Tourist Starter Pack 100rb",
+"item_price":100000,
+"description":"25GB of Data for 30 Days",
+"sub_total_bill":100000,
+"total_bill":100000,
+"tax":0,
+"discount":0,
+"order_status":"new",
+"status_order_co":"pending",
+"created_at":"2022-10-19 15:22:31"}" response_time=10.266109ms status_code=200 transactionid= url="http://10.59.104.222:448/order/wna/RE221019152231339522310"
+time="2022-10-19T15:29:37+07:00" level=info event=payment_wna method=POST msisdn= payment_type=finnet_cc request="{"transaction":{"transaction_id":"RG221019152231339522310",
+"channel":"b0"},
+"service":{"service_id":"628111111111",
+"funder_service_id":"628111111111"},
+"order":{"order_type":"FR",
+"element4":"b0test123",
+"item_type":"prepaidwna",
+"item_name":"WNA Tourist Starter Pack 100rb",
+"session_token":"https://telkomsel.com/shops/preorder-wna/checkout/FRb02210190322313885a8140",
+"redirect_url":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",
+"redirect_url_failed":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",
+"interface":"web",
+"customer_info":{"customer_name":"Hendrik Tjabringa",
+"customer_email":"tjabringa@hotmail.com"},
+"expiry":{"duration":5000,
+"uom":"second"},
+"payment":{"payment_method":"FINNET_CC",
+"payment_amount":{"total_amount":100000,
+"product_fee":0,
+"delivery_fee":0}},
+"vas_recharge_info":{"organization_code":"707002",
+"element2":"jvchIAmNEkh2=",
+"third_party_id":"NGRS_INTERNALTSEL",
+"third_party_password":"kMhIAmNE4h8=",
+"fund_source":"CC_VISA",
+"delivery_channel":"5262"}}}" 
+
+response="{"transaction":{"transaction_id":"RG221019152231339522310",
+"channel":"b0",
+"status_code":"30ERR01",
+"status_desc":"Service Provider Error: Elisa - Invalid Parameter - Transaction_ID RG221019152231339522310 is already exist"}}n" response_time=79.189655ms status_code=400 transactionid=RG221019152231339522310 url="https://api.digitalcore.telkomsel.co.id/scrt/esb/v2/online-orders/FRb02210190322313885a8140/payment"

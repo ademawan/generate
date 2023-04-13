@@ -1,0 +1,24 @@
+{
+    "aud": "b393618436e511ec8d3d0242ac130003",
+    "auditTrackingId": "cbe80ea9-bf38-42af-a1e3-8a1c716b288c-8715",
+    "authGrantId": "nMjZnwHYHc9BaRvDBDC51z3neZo.kRBkMm4Tk8sgCv5Dd1e1chjGfGE",
+    "auth_level": 0,
+    "auth_time": 1675968374,
+    "cts": "OAUTH2_GRANT_SET",
+    "exp": 1675969275,
+    "expires_in": 900,
+    "grant_type": "authorization_code",
+    "iat": 1675968375,
+    "iss": "https://ciamamprepdapp.ciam.telkomsel.com:10003/openam/oauth2/tsel/wec/web",
+    "jti": "nMjZnwHYHc9BaRvDBDC51z3neZo.FVsxtwjA9pW8OH1tNILIK7lueK4",
+    "nbf": 1675968375,
+    "nonce": "true",
+    "realm": "/tsel/wec/web",
+    "scope": [
+     "openid",
+     "profile"
+    ],
+    "sub": "7c5c96be-30ac-4977-b92c-6264632b2069",
+    "tokenName": "access_token",
+    "token_type": "Bearer"
+   }

@@ -1,0 +1,61 @@
+{
+	"folders": [
+		{
+			"path": "access_token"
+		},
+		{
+			"path": "generate_json_to_map"
+		},
+		{
+			"path": "generate_json_to_struct"
+		},
+		{
+			"path": "generate_pdf"
+		},
+		{
+			"path": "generate_query_mysql"
+		},
+		{
+			"path": "generate_signature"
+		},
+		{
+			"path": "generate_struct_to_json"
+		},
+		{
+			"path": "../openapiservice"
+		},
+		{
+			"path": "../../../Documents/mawan/query_postgres"
+		},
+		{
+			"path": "logging"
+		},
+		{
+			"path": "generate_encrypt_aes_cbc"
+		},
+		{
+			"path": "../testing/postgres"
+		},
+		{
+			"path": "pointer_testing"
+		},
+		{
+			"path": "benchmark_test"
+		},
+		{
+			"path": "check_file_exist"
+		},
+		{
+			"path": "decrypt_ECBD"
+		},
+		{
+			"path": "JWT"
+		},
+		{
+			"path": "goroutine"
+		},
+		{
+			"path": "mux"
+		}
+	]
+}

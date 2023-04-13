@@ -1,0 +1,180 @@
+[
+  {
+    "wna_id": "RE221026125838403258380",
+    "trx_id": "RG221026125838403258380",
+    "order_id_esb": "FRb022102612583845576abd0",
+    "user_id": "",
+    "code": "W001221026125838820270190",
+    "device_id": "ad6eb8a5-a6da-4ce6-8184-a67ba03dea1b",
+    "transaction_number": "",
+    "fullname": "dikadia",
+    "gender": "",
+    "passport_number": "dJDWJ4",
+    "passport_id": "F0022210261258380350",
+    "nationality": "Aland Islands",
+    "birthday": "04-10-2022",
+    "place_of_birth": "diawdi",
+    "address": "diwkaw",
+    "email": "adw@gmail.com",
+    "imei_id": "F0022210261258383960",
+    "imei_number_1": "239214892289912",
+    "imei_number_2": "239214895249912",
+    "purchase_mode": "non cash",
+    "payment_method": "cc",
+    "payment_status": "pending",
+    "interaction_id": "",
+    "kip_id": "",
+    "case_id": "",
+    "item_name": "WNA Tourist Starter Pack 100rb",
+    "item_price": 100000,
+    "description": "25GB of Data for 30 Days",
+    "sub_total_bill": 100000,
+    "total_bill": 100000,
+    "tax": 0,
+    "discount": 0,
+    "order_status": "new",
+    "status_order_co": "pending",
+    "created_at": "2022-10-26 12:58:38"
+  },
+  {
+    "transaction": {
+      "transaction_id": "RG221026125838403258380",
+      "channel": "b0"
+    },
+    "service": {
+      "service_id": "628111111111",
+      "funder_service_id": "628111111111"
+    },
+    "order": {
+      "order_type": "FR",
+      "element4": "b0test123",
+      "item_type": "prepaidwna",
+      "item_name": "WNA Tourist Starter Pack 100rb",
+      "session_token": "https://telkomsel.com/shops/preorder-wna/checkout/FRb022102612583845576abd0",
+      "redirect_url": "https://telkomsel.com/shops/preorder-wna/payment/callback/FRb022102612583845576abd0?wna_id=RE221026125838403258380",
+      "redirect_url_failed": "https://telkomsel.com/shops/preorder-wna/payment/callback/FRb022102612583845576abd0?wna_id=RE221026125838403258380",
+      "interface": "web",
+      "customer_info": {
+        "customer_name": "dikadia",
+        "customer_email": "adw@gmail.com"
+      },
+      "expiry": {
+        "duration": 5000,
+        "uom": "second"
+      },
+      "payment": {
+        "payment_method": "FINNET_CC",
+        "payment_amount": {
+          "total_amount": 100000,
+          "product_fee": 0,
+          "delivery_fee": 0
+        }
+      },
+      "vas_recharge_info": {
+        "organization_code": "707002",
+        "element2": "jvchIAmNEkh2=",
+        "third_party_id": "NGRS_INTERNALTSEL",
+        "third_party_password": "kMhIAmNE4h8=",
+        "fund_source": "CC_VISA",
+        "delivery_channel": "5262"
+      }
+    }
+  },
+  {
+    "transaction": {
+      "transaction_id": "RG221026125838403258380",
+      "channel": "b0",
+      "status_code": "",
+      "status_desc": "Service Provider Error: Elisa - "
+    }
+  },
+  {
+    "wna_id": "RE221026125838403258380",
+    "trx_id": "RG221026125838403258380",
+    "order_id_esb": "FRb022102612583845576abd0",
+    "user_id": "",
+    "code": "W001221026125838820270190",
+    "device_id": "ad6eb8a5-a6da-4ce6-8184-a67ba03dea1b",
+    "transaction_number": "",
+    "fullname": "dikadia",
+    "gender": "",
+    "passport_number": "dJDWJ4",
+    "passport_id": "F0022210261258380350",
+    "nationality": "Aland Islands",
+    "birthday": "04-10-2022",
+    "place_of_birth": "diawdi",
+    "address": "diwkaw",
+    "email": "adw@gmail.com",
+    "imei_id": "F0022210261258383960",
+    "imei_number_1": "239214892289912",
+    "imei_number_2": "239214895249912",
+    "purchase_mode": "non cash",
+    "payment_method": "cc",
+    "payment_status": "pending",
+    "interaction_id": "",
+    "kip_id": "",
+    "case_id": "",
+    "item_name": "WNA Tourist Starter Pack 100rb",
+    "item_price": 100000,
+    "description": "25GB of Data for 30 Days",
+    "sub_total_bill": 100000,
+    "total_bill": 100000,
+    "tax": 0,
+    "discount": 0,
+    "order_status": "new",
+    "status_order_co": "pending",
+    "created_at": "2022-10-26 12:58:38"
+  },
+  {
+    "transaction": {
+      "transaction_id": "RG221026125838403258380",
+      "channel": "b0"
+    },
+    "service": {
+      "service_id": "628111111111",
+      "funder_service_id": "628111111111"
+    },
+    "order": {
+      "order_type": "FR",
+      "element4": "b0test123",
+      "item_type": "prepaidwna",
+      "item_name": "WNA Tourist Starter Pack 100rb",
+      "session_token": "https://telkomsel.com/shops/preorder-wna/checkout/FRb022102612583845576abd0",
+      "redirect_url": "https://telkomsel.com/shops/preorder-wna/payment/callback/FRb022102612583845576abd0?wna_id=RE221026125838403258380",
+      "redirect_url_failed": "https://telkomsel.com/shops/preorder-wna/payment/callback/FRb022102612583845576abd0?wna_id=RE221026125838403258380",
+      "interface": "web",
+      "customer_info": {
+        "customer_name": "dikadia",
+        "customer_email": "adw@gmail.com"
+      },
+      "expiry": {
+        "duration": 5000,
+        "uom": "second"
+      },
+      "payment": {
+        "payment_method": "FINNET_CC",
+        "payment_amount": {
+          "total_amount": 100000,
+          "product_fee": 0,
+          "delivery_fee": 0
+        }
+      },
+      "vas_recharge_info": {
+        "organization_code": "707002",
+        "element2": "jvchIAmNEkh2=",
+        "third_party_id": "NGRS_INTERNALTSEL",
+        "third_party_password": "kMhIAmNE4h8=",
+        "fund_source": "CC_VISA",
+        "delivery_channel": "5262"
+      }
+    }
+  },
+  {
+    "transaction": {
+      "transaction_id": "RG221026125838403258380",
+      "channel": "b0",
+      "status_code": "30ERR01",
+      "status_desc": "Service Provider Error: Elisa - Invalid Parameter - Transaction_ID RG221026125838403258380 is already exist"
+    }
+  }
+]

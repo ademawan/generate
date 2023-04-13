@@ -1,0 +1,17 @@
+time="2023-02-13T23:25:27+07:00" level=info msg=ERROR event=validate response=ERROR response_time=159ns
+time="2023-02-13T23:26:50+07:00" level=info msg=ERROR event=validate response=ERROR response_time=156ns
+time="2023-02-13T23:28:13+07:00" level=error msg=ERROR event=validate response=ERROR response_time=140ns
+time="2023-02-13T23:34:51+07:00" level=error msg="&{sub validate 276ns holla}" event=validate response="&{sub validate 276ns holla}" response_time=129ns
+time="2023-02-13T23:36:07+07:00" level=error msg="{\"Event\":\"sub validate\",\"ResponseTime\":137,\"Response\":\"holla\"}" event=validate response="{\"Event\":\"sub validate\",\"ResponseTime\":137,\"Response\":\"holla\"}" response_time="31.67µs"
+time="2023-02-13T23:36:41+07:00" level=error msg="\"test\"" event=validate response="\"test\"" response_time="6.175µs"
+time="2023-02-15T00:58:58+07:00" level=error msg="\"test\"" event=validate response="\"test\"" response_time="6.196µs"
+time="2023-02-15T01:00:25+07:00" level=error msg="\"test\"" event=validate response="\"test\"" response_time="5.66µs"
+time="2023-02-15T01:00:41+07:00" level=error msg="\"test\"" event=validate response="\"test\"" response_time="6.28µs"
+time="2023-02-15T01:09:31+07:00" level=error msg="\"test\"" event=validate response="\"test\"" response_time="6.167µs"
+time="2023-02-15T01:09:43+07:00" level=error msg="\"test\"" event=validate response="\"test\"" response_time="5.909µs"
+time="2023-03-27T22:23:03+07:00" level=error msg="\"test\"" event=validate response="\"test\"" response_time="6.576µs"
+time="2023-03-27T22:27:07+07:00" level=error msg="\"test\"" event=validate response="\"test\"" response_time="5.558µs"
+time="2023-03-27T22:35:26+07:00" level=error msg="\"test\"" event=validate response="\"test\"" response_time="5.569µs"
+time="2023-03-27T22:35:26+07:00" level=info msg=success Event=validate Response="\"test\"" ResponseTime=94365
+time="2023-03-27T22:35:39+07:00" level=error msg="\"test\"" event=validate response="\"test\"" response_time="5.672µs"
+time="2023-03-27T22:35:39+07:00" level=info msg=success Event=validate Response="\"test\"" ResponseTime=87902

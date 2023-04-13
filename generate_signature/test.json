@@ -1,0 +1,17 @@
+{
+ "tier_status": "GOLD",
+ "tier_transaction_price": "",
+ "transaction_price_left": "419700",
+ "tier_transaction_date": "April 2023",
+ "purchase_before": "01 April 2023",
+ "next_tier": "PLATINUM",
+ "percentage": "53.37",
+ "detail_transaction": null,
+ "is_silver": false,
+ "is_gold": true,
+ "is_platinum": false,
+ "is_diamond": false,
+ "is_corporate": false,
+ "next_month": "April",
+ "is_down": false
+}

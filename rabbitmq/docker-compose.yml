@@ -1,0 +1,14 @@
+version: '3.0'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: my-rabbit
+    volumes:
+      #- ./rabbitmq/etc/definitions.json:/etc/rabbitmq/definitions.json
+      - .rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      #- ./rabbitmq/data:/var/lib/rabbitmq/mnesia/rabbit@my-rabbit
+      - ./logs:/var/log/rabbitmq/log
+    ports:
+      - 5672:5672
+      - 15672:15672

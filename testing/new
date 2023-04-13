@@ -1,0 +1,30 @@
+	package main
+
+	import (
+		"database/sql"
+		"fmt"
+		"log"
+		"regexp"
+		"strings"	
+
+		_ "github.com/lib/pq"
+	)
+
+	func main() {
+
+		host := "103.13.207.248"
+		port := "5432"
+		user := "postgres"
+		password := "X2023RoG@1"
+		dbname := "rogerdev_project20230107_db"
+
+		psqlInfo := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
+		result, err := sql.Open("postgres", psqlInfo)
+		if err != nil {
+			log.Fatalf("Tidak Konek DB Errornya : %s", err)
+		}
+		fmt.Println("connecr")
+		defer result.Close()
+		fmt.Println(result)
+
+	}

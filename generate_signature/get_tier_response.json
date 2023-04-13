@@ -1,0 +1,40 @@
+{
+    "status":200,
+    "message":"success",
+    "data":{"tier_status":"GOLD",
+    "tier_transaction_price":"475358",
+    "transaction_price_left":"424642",
+    "tier_transaction_date":"21 March 2023",
+    "purchase_before":"01 March 2023",
+    "next_tier":"PLATINUM",
+    "percentage":"52.82",
+    "detail_transaction":[
+            {
+                "month":"February 2023",
+                "value":"NULL",
+                "description":"21 February 2023"
+            },
+            {
+                "month":"January 2023",
+                "value":"NULL",       
+                "description":"21 February 2023"
+            },
+            {
+                "month":"December 2022",
+                "value":"475358",
+                "description":"21 February 2023"
+            },
+            {
+                "month":"December 2022",
+                "value":"475358",
+                "description":"21 February 2023"
+            }
+        ],
+        "is_silver":false,
+        "is_gold":true,
+        "is_platinum":false,
+        "is_diamond":false,
+        "is_corporate":false,
+        "next_month":"March"
+        }
+}

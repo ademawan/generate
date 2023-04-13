@@ -1,0 +1,88 @@
+// [apps@tselprtlpapp3 logs]$ cat payment_wna.log | grep RE221025172630818726300
+
+
+time="2022-10-25T17:26:34+07:00" level=info event=validate method=GET msisdn= payment_type= request="<nil>" 
+
+response="
+{"wna_id":"RE221025172630818726300",
+"trx_id":"RG221025172630818726300",
+"order_id_esb":"FRb02210250526308996cc090",
+"user_id":"",
+"code":"W001221025172631190913630",
+"device_id":"844095af-df87-4d30-bc0a-cd85636294c9",
+"transaction_number":"",
+"fullname":"diakdaw",
+"gender":"",
+"passport_number":"03r9WD",
+"passport_id":"F0022210251726303160",
+"nationality":"American Samoa",
+"birthday":"05-10-2022",
+"place_of_birth":"diawdkwa",
+"address":"adiawidk",
+"email":"aawdwak@gmail.com",
+"imei_id":"F0022210251726308080",
+"imei_number_1":"293847328947323",
+"imei_number_2":"243284789324734",
+"purchase_mode":"non cash",
+"payment_method":"cc",
+"payment_status":"pending",
+"interaction_id":"",
+"kip_id":"",
+"case_id":"",
+"item_name":"WNA Tourist Starter Pack 100rb",
+"item_price":100000,
+"description":"25GB of Data for 30 Days",
+"sub_total_bill":100000,
+"total_bill":100000,
+"tax":0,
+"discount":0,
+"order_status":"new",
+"status_order_co":"pending",
+"created_at":"2022-10-25 17:26:31"}" response_time=2.140669ms status_code=200 transactionid= url="http://10.59.69.244:448/order/wna/RE221025172630818726300"
+
+time="2022-10-25T17:26:34+07:00" level=info event=payment_wna method=POST msisdn= payment_type=finnet_cc request="{"transaction":{"transaction_id":"RG221025172630818726300",
+"channel":"b0"},
+"service":{"service_id":"628111111111",
+"funder_service_id":"628111111111"},
+"order":{"order_type":"FR",
+"element4":"b0test123",
+"item_type":"prepaidwna",
+"item_name":"WNA Tourist Starter Pack 100rb",
+"session_token":"https://telkomsel.com/shops/preorder-wna/checkout/FRb02210250526308996cc090",
+"redirect_url":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210250526308996cc090?wna_id=RE221025172630818726300",
+"redirect_url_failed":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210250526308996cc090?wna_id=RE221025172630818726300",
+"interface":"web",
+"customer_info":{"customer_name":"diakdaw",
+"customer_email":"aawdwak@gmail.com"},
+"expiry":{"duration":5000,
+"uom":"second"},
+"payment":{"payment_method":"FINNET_CC",
+"payment_amount":{"total_amount":100000,
+"product_fee":0,
+"delivery_fee":0}},
+"vas_recharge_info":{"organization_code":"707002",
+"element2":"jvchIAmNEkh2=",
+"third_party_id":"NGRS_INTERNALTSEL",
+"third_party_password":"kMhIAmNE4h8=",
+"fund_source":"CC_VISA",
+"delivery_channel":"5262"}}}" 
+
+response="{"transaction":{"transaction_id":"RG221025172630818726300",
+"channel":"b0",
+"status_code":"00000",
+"status_desc":"Success"},
+"deeplink_url":"https://live.finpay.id/pg/payment/card/access/f09a60f4fc0a3e3081fc29a6c9693212f6b434c1a11b7034e2120f0141b748d2"}n" response_time=466.324596ms status_code=200 transactionid=RG221025172630818726300 url="https://api.digitalcore.telkomsel.co.id/scrt/esb/v2/online-orders/FRb02210250526308996cc090/payment"
+
+
+
+
+
+
+///
+time="2022-10-25T17:24:54+07:00" level=info event=validate method=GET msisdn= payment_type= request="<nil>" response="{"wna_id":"RE221025172436813724360","trx_id":"RG221025172436813724360","order_id_esb":"FRb0221025052436860873a90","user_id":"","code":"W001221025172437048531510","device_id":"844095af-df87-4d30-bc0a-cd85636294c9","transaction_number":"","fullname":"odiawda","gender":"","passport_number":"98Dwjdkw3","passport_id":"F0022210251724364270","nationality":"Afghanistan","birthday":"04-10-2022","place_of_birth":"wdwad","address":"dwada","email":"adwaa@gmail.com","imei_id":"F0022210251724367980","imei_number_1":"243284789324734","imei_number_2":"243284789324734","purchase_mode":"non cash","payment_method":"cc","payment_status":"pending","interaction_id":"","kip_id":"","case_id":"","item_name":"WNA Tourist Starter Pack 100rb","item_price":100000,"description":"25GB of Data for 30 Days","sub_total_bill":100000,"total_bill":100000,"tax":0,"discount":0,"order_status":"new","status_order_co":"pending","created_at":"2022-10-25 17:24:37"}" response_time=2.696069ms status_code=200 transactionid= url="http://10.59.69.244:448/order/wna/RE221025172436813724360"
+
+Sore Mas @IT - SMOPs  boleh minta tolong bantuan pengecekkannya di prod untuk transaksi 
+
+berikut issue baru yang kita dapatkan: 
+
+time="2022-10-25T17:24:58+07:00" level=info event=payment_wna method=POST msisdn= payment_type=finnet_cc request="{"transaction":{"transaction_id":"RG221025172436813724360","channel":"b0"},"service":{"service_id":"628111111111","funder_service_id":"628111111111"},"order":{"order_type":"FR","element4":"b0test123","item_type":"prepaidwna","item_name":"WNA Tourist Starter Pack 100rb","session_token":"https://telkomsel.com/shops/preorder-wna/checkout/FRb0221025052436860873a90","redirect_url":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb0221025052436860873a90?wna_id=RE221025172436813724360","redirect_url_failed":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb0221025052436860873a90?wna_id=RE221025172436813724360","interface":"web","customer_info":{"customer_name":"odiawda","customer_email":"adwaa@gmail.com"},"expiry":{"duration":5000,"uom":"second"},"payment":{"payment_method":"FINNET_CC","payment_amount":{"total_amount":100000,"product_fee":0,"delivery_fee":0}},"vas_recharge_info":{"organization_code":"707002","element2":"jvchIAmNEkh2=","third_party_id":"NGRS_INTERNALTSEL","third_party_password":"kMhIAmNE4h8=","fund_source":"CC_VISA","delivery_channel":"5262"}}}" response="{"transaction":{"transaction_id":"RG221025172436813724360","channel":"b0","status_code":"30ERR06","status_desc":"Service Provider Error: Elisa - Timeout to Worker"}}n" response_time=4.11408724s status_code=500 transactionid=RG221025172436813724360 url="https://api.digitalcore.telkomsel.co.id/scrt/esb/v2/online-orders/FRb0221025052436860873a90/payment"

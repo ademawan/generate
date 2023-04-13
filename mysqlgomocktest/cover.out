@@ -1,0 +1,21 @@
+mode: set
+mysqlgomocktest/main.go:11.67,13.16 2 1
+mysqlgomocktest/main.go:17.2,17.15 1 1
+mysqlgomocktest/main.go:26.2,26.75 1 1
+mysqlgomocktest/main.go:29.2,29.120 1 1
+mysqlgomocktest/main.go:32.2,32.8 1 1
+mysqlgomocktest/main.go:13.16,15.3 1 0
+mysqlgomocktest/main.go:17.15,18.14 1 1
+mysqlgomocktest/main.go:19.12,20.21 1 1
+mysqlgomocktest/main.go:21.11,22.17 1 1
+mysqlgomocktest/main.go:26.75,28.3 1 0
+mysqlgomocktest/main.go:29.120,31.3 1 1
+mysqlgomocktest/main.go:35.13,38.16 2 0
+mysqlgomocktest/main.go:41.2,43.82 2 0
+mysqlgomocktest/main.go:46.2,47.16 2 0
+mysqlgomocktest/main.go:38.16,39.13 1 0
+mysqlgomocktest/main.go:43.82,44.13 1 0
+mysqlgomocktest/main.go:47.16,49.3 1 0
+mysqlgomocktest/main.go:51.44,53.16 2 1
+mysqlgomocktest/main.go:56.2,56.12 1 1
+mysqlgomocktest/main.go:53.16,55.3 1 0

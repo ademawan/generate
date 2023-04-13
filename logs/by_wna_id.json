@@ -1,0 +1,354 @@
+// [apps@tselprtlpapp4 logs]$ cat payment_wna.log | grep RE221019152231339522310
+
+time="2022-10-19T15:22:42+07:00" level=info event=validate method=GET msisdn= payment_type= request="<nil>" response="
+{
+    "wna_id":"RE221019152231339522310",
+    "trx_id":"RG221019152231339522310",
+    "order_id_esb":"FRb02210190322313885a8140",
+    "user_id":"",
+    "code":"W001221019152231798958710",
+    "device_id":"21123e2c-ce19-4075-ba0f-1399bbcce444",
+    "transaction_number":"",
+    "fullname":"Hendrik Tjabringa",
+    "gender":"",
+    "passport_number":"BT8BJ2J56",
+    "passport_id":"F0022210191522310290",
+    "nationality":"Netherlands",
+    "birthday":"05-06-1953",
+    "place_of_birth":"SLOCHTEREN",
+    "address":"SWISS-BELRESORT Watu JimbarnJl. Danau Tamblingan No.99A, Sanur,  Bali 80228",
+    "email":"tjabringa@hotmail.com",
+    "imei_id":"F0022210191522313320",
+    "imei_number_1":"354859095045267",
+    "imei_number_2":"",
+    "purchase_mode":"non cash",
+    "payment_method":"cc",
+    "payment_status":"pending",
+    "interaction_id":"",
+    "kip_id":"",
+    "case_id":"",
+    "item_name":"WNA Tourist Starter Pack 100rb",
+    "item_price":100000,"description":"25GB of Data for 30 Days",
+    "sub_total_bill":100000,"total_bill":100000,"tax":0,"discount":0,"order_status":"new",
+    "status_order_co":"pending",
+    "created_at":"2022-10-19 15:22:31"}
+// " response_time=6.217398ms status_code=200 transactionid= url="http://10.59.104.222:448/order/wna/RE221019152231339522310"
+
+
+time="2022-10-19T15:22:42+07:00" level=info event=payment_wna method=POST msisdn= payment_type=finnet_cc 
+request="
+{
+    "transaction":{
+        "transaction_id":"RG221019152231339522310",
+        "channel":"b0"},
+    "service":{
+    "service_id":"628111111111",
+    "funder_service_id":"628111111111"},
+    "order":{
+        "order_type":"FR",
+        "element4":"b0test123",
+        "item_type":"prepaidwna",
+        "item_name":"WNA Tourist Starter Pack 100rb",
+        "session_token":"https://telkomsel.com/shops/preorder-wna/checkout/FRb02210190322313885a8140",
+        "redirect_url":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",
+        "redirect_url_failed":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",
+        "interface":"web",
+        "customer_info":{
+            "customer_name":"Hendrik Tjabringa",
+            "customer_email":"tjabringa@hotmail.com"
+        },
+        "expiry":{
+            "duration":5000,"uom":"second"
+        },
+        "payment":{
+            "payment_method":"FINNET_CC",
+            "payment_amount":{
+                "total_amount":100000,
+                "product_fee":0,
+                "delivery_fee":0
+             }
+         },
+        "vas_recharge_info":{
+            "organization_code":"707002",
+            "element2":"jvchIAmNEkh2=",
+            "third_party_id":"NGRS_INTERNALTSEL",
+            "third_party_password":"kMhIAmNE4h8=",
+            "fund_source":"CC_VISA",
+            "delivery_channel":"5262"
+        
+        }
+    }
+}
+response=
+{
+    "transaction":{
+        "transaction_id":"RG221019152231339522310",
+        "channel":"b0",
+        "status_code":"00000",
+        "status_desc":"Success"
+    },
+    "deeplink_url":"https://live.finpay.id/pg/payment/card/access/81a22cd55bad8affdc6686b70d99060eb36aff56324fb08d5894942a9ab28afc"
+}
+ response_time=519.334289ms status_code=200 transactionid=RG221019152231339522310 url="https://api.digitalcore.telkomsel.co.id/scrt/esb/v2/online-orders/FRb02210190322313885a8140/payment"
+
+
+time="2022-10-19T15:26:20+07:00" level=info event=validate method=GET msisdn= payment_type= request="<nil>" response="
+{
+    "wna_id":"RE221019152231339522310",
+    "trx_id":"RG221019152231339522310",
+    "order_id_esb":"FRb02210190322313885a8140",
+    "user_id":"",
+    "code":"W001221019152231798958710",
+    "device_id":"21123e2c-ce19-4075-ba0f-1399bbcce444",
+    "transaction_number":"",
+    "fullname":"Hendrik Tjabringa",
+    "gender":"",
+    "passport_number":"BT8BJ2J56",
+    "passport_id":"F0022210191522310290",
+    "nationality":"Netherlands",
+    "birthday":"05-06-1953",
+    "place_of_birth":"SLOCHTEREN",
+    "address":"SWISS-BELRESORT Watu JimbarnJl. Danau Tamblingan No.99A, Sanur,  Bali 80228",
+    "email":"tjabringa@hotmail.com",
+    "imei_id":"F0022210191522313320",
+    "imei_number_1":"354859095045267",
+    "imei_number_2":"",
+    "purchase_mode":"non cash",
+    "payment_method":"cc",
+    "payment_status":"pending",
+    "interaction_id":"",
+    "kip_id":"",
+    "case_id":"",
+    "item_name":"WNA Tourist Starter Pack 100rb",
+    "item_price":100000,"description":"25GB of Data for 30 Days",
+    "sub_total_bill":100000,"total_bill":100000,"tax":0,"discount":0,"order_status":"new",
+    "status_order_co":"pending",
+    "created_at":"2022-10-19 15:22:31"}
+// " response_time=6.079192ms status_code=200 transactionid= url="http://10.59.104.222:448/order/wna/RE221019152231339522310"
+// 
+
+
+time="2022-10-19T15:26:20+07:00" level=info event=payment_wna method=POST msisdn= payment_type=finnet_cc 
+request="
+{
+    "transaction":{
+        "transaction_id":"RG221019152231339522310",
+        "channel":"b0"
+    },
+    "service":{
+        "service_id":"628111111111",
+        "funder_service_id":"628111111111"
+    },
+    "order":{
+        "order_type":"FR",
+        "element4":"b0test123",
+        "item_type":"prepaidwna",
+        "item_name":"WNA Tourist Starter Pack 100rb",
+        "session_token":"https://telkomsel.com/shops/preorder-wna/checkout/FRb02210190322313885a8140",
+        "redirect_url":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",
+        "redirect_url_failed":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",
+        "interface":"web",
+        "customer_info":{
+            "customer_name":"Hendrik Tjabringa",
+            "customer_email":"tjabringa@hotmail.com"
+        },
+        "expiry":{
+            "duration":5000,"uom":"second"
+        },
+        "payment":{
+            "payment_method":"FINNET_CC",
+            "payment_amount":{
+                "total_amount":100000,"product_fee":0,"delivery_fee":0
+            }
+        },
+        "vas_recharge_info":{
+            "organization_code":"707002",
+            "element2":"jvchIAmNEkh2=",
+            "third_party_id":"NGRS_INTERNALTSEL",
+            "third_party_password":"kMhIAmNE4h8=",
+            "fund_source":"CC_VISA",
+            "delivery_channel":"5262"
+        }
+    }
+}
+// " response="
+{
+    "transaction":{
+        "transaction_id":"RG221019152231339522310",
+        "channel":"b0",
+        "status_code":"30ERR01",
+        "status_desc":"Service Provider Error: Elisa - Invalid Parameter - Transaction_ID RG221019152231339522310 is already exist"
+    }
+}
+// n" response_time=82.741269ms status_code=400 transactionid=RG221019152231339522310 url="https://api.digitalcore.telkomsel.co.id/scrt/esb/v2/online-orders/FRb02210190322313885a8140/payment"
+
+
+// time="2022-10-19T15:29:37+07:00" level=info event=validate method=GET msisdn= payment_type= request="<nil>" response="
+{
+    "wna_id":"RE221019152231339522310",
+    "trx_id":"RG221019152231339522310",
+    "order_id_esb":"FRb02210190322313885a8140",
+    "user_id":"",
+    "code":"W001221019152231798958710",
+    "device_id":"21123e2c-ce19-4075-ba0f-1399bbcce444",
+    "transaction_number":"",
+    "fullname":"Hendrik Tjabringa",
+    "gender":"",
+    "passport_number":"BT8BJ2J56",
+    "passport_id":"F0022210191522310290",
+    "nationality":"Netherlands",
+    "birthday":"05-06-1953",
+    "place_of_birth":"SLOCHTEREN",
+    "address":"SWISS-BELRESORT Watu JimbarnJl. Danau Tamblingan No.99A, Sanur,  Bali 80228",
+    "email":"tjabringa@hotmail.com",
+    "imei_id":"F0022210191522313320",
+    "imei_number_1":"354859095045267",
+    "imei_number_2":"",
+    "purchase_mode":"non cash",
+    "payment_method":"cc",
+    "payment_status":"pending",
+    "interaction_id":"",
+    "kip_id":"",
+    "case_id":"",
+    "item_name":"WNA Tourist Starter Pack 100rb",
+    "item_price":100000,"description":"25GB of Data for 30 Days",
+    "sub_total_bill":100000,"total_bill":100000,"tax":0,"discount":0,"order_status":"new",
+    "status_order_co":"pending",
+    "created_at":"2022-10-19 15:22:31"}
+// " response_time=10.266109ms status_code=200 transactionid= url="http://10.59.104.222:448/order/wna/RE221019152231339522310"
+
+
+// time="2022-10-19T15:29:37+07:00" level=info event=payment_wna method=POST msisdn= payment_type=finnet_cc 
+request="
+{
+    "transaction":{
+        "transaction_id":"RG221019152231339522310",
+        "channel":"b0"
+        },
+    "service":{
+        "service_id":"628111111111",
+        "funder_service_id":"628111111111"
+        },
+    "order":{
+        "order_type":"FR",
+        "element4":"b0test123",
+        "item_type":"prepaidwna",
+        "item_name":"WNA Tourist Starter Pack 100rb",
+        "session_token":"https://telkomsel.com/shops/preorder-wna/checkout/FRb02210190322313885a8140",
+        "redirect_url":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",
+        "redirect_url_failed":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",
+        "interface":"web",
+        "customer_info":{
+        "customer_name":"Hendrik Tjabringa",
+        "customer_email":"tjabringa@hotmail.com"},"expiry":{
+        "duration":5000,"uom":"second"},"payment":{
+        "payment_method":"FINNET_CC",
+        "payment_amount":{
+        "total_amount":100000,"product_fee":0,"delivery_fee":0}},"vas_recharge_info":{
+        "organization_code":"707002",
+        "element2":"jvchIAmNEkh2=",
+        "third_party_id":"NGRS_INTERNALTSEL",
+        "third_party_password":"kMhIAmNE4h8=",
+        "fund_source":"CC_VISA",
+        "delivery_channel":"5262"}
+    }}
+
+" response="{
+    "transaction":{
+    "transaction_id":"RG221019152231339522310",
+    "channel":"b0",
+    "status_code":"30ERR01",
+    "status_desc":"Service Provider Error: Elisa - Invalid Parameter - Transaction_ID RG221019152231339522310 is already exist"}}
+// n" response_time=79.189655ms status_code=400 transactionid=RG221019152231339522310 url="https://api.digitalcore.telkomsel.co.id/scrt/esb/v2/online-orders/FRb02210190322313885a8140/payment"
+// [apps@tselprtlpapp4 logs]$ 
+
+
+curl -X GET -H 'x-msisdn: 6282114268231' -H 'TRANSACTIONID: A301180116194955068818530' -H 'CHANNELID: b0' -H 'api_key: eedfevw8q7rym4zhdsa64cma' -H 'x-signature: 071a1d9ce3da15f250aaf70595b12559' -H 'Content-Type: application/json' 'https://api.digitalcore.telkomsel.co.id/preprod-web/scrt/offer/geteligibleoffers/6282114268231/ML4_BP_1112' -vik
+
+
+curl \
+--header "api_key:{api_key}" \
+--header "x-signature:{signature}" \
+--header "Content-Type:application/json" \
+--header "Accept:application/json", \
+--request POST --data \
+'{\
+    "transaction":{\
+        "transaction_id":"RG221019152231339522310",\
+        "channel":"b0"\
+        },\
+    "service":{\
+        "service_id":"628111111111",\
+        "funder_service_id":"628111111111"\
+        },\
+    "order":{\
+        "order_type":"FR",\
+        "element4":"b0test123",\
+        "item_type":"prepaidwna",\
+        "item_name":"WNA Tourist Starter Pack 100rb",\
+        "session_token":"https://telkomsel.com/shops/preorder-wna/checkout/FRb02210190322313885a8140",\
+        "redirect_url":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",\
+        "redirect_url_failed":"https://telkomsel.com/shops/preorder-wna/payment/callback/FRb02210190322313885a8140?wna_id=RE221019152231339522310",\
+        "interface":"web",\
+        "customer_info":{\
+            "customer_name":"Hendrik Tjabringa",\
+            "customer_email":"tjabringa@hotmail.com"},\
+        "expiry":{\
+            "duration":5000,"uom":"second"},\
+        "payment":{\
+            "payment_method":"FINNET_CC",\
+            "payment_amount":{\
+                "total_amount":100000,"product_fee":0,"delivery_fee":0}\
+            },\
+        "vas_recharge_info":{\
+            "organization_code":"707002",\
+            "element2":"jvchIAmNEkh2=",\
+            "third_party_id":"NGRS_INTERNALTSEL",\
+            "third_party_password":"kMhIAmNE4h8=",\
+            "fund_source":"CC_VISA",\
+            "delivery_channel":"5262"}\
+    }}' --insecure https://api.digitalcore.telkomsel.co.id/scrt/esb/v2/online-orders/FRb02210190322313885a8140/payment
+
+
+
+        // curl \
+        // --header "x-signature-key:cac3e2b0eae211831703c8d04fe08520" \
+        // --header "Content-Type:application/json" \
+        // --header "Accept:application/json", \
+        // --request POST --data \
+        // '{\
+        //     "transaction_id":"RG221019152231339522310",\
+        //     "status_order":"complete",\
+        //     "description":"xxxx"\
+        // }' http://localhost:448/api/callback/order_wna/status
+
+
+
+        curl --header "AccessToken:eyJ0eXAiOiJKV1QiLCJraWQiOiJ3VTNpZklJYUxPVUFSZVJCL0ZHNmVNMVAxUU09IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJhNmEyODMzMC1mYTVkLTQyNjMtOWUzMy1hNjU2NTY0MGRiZTkiLCJjdHMiOiJPQVVUSDJfR1JBTlRfU0VUIiwiYXV0aF9sZXZlbCI6MCwiYXVkaXRUcmFja2luZ0lkIjoiNDU5ZTBjOGQtMWU2Yy00NWViLWI2MjUtMTk1MGIxYTE5YWMzLTM0NDE5OSIsImlzcyI6Imh0dHBzOi8vY2lhbWFtcHJlcGRhcHAuY2lhbS50ZWxrb21zZWwuY29tOjEwMDAzL29wZW5hbS9vYXV0aDIvdHNlbC93ZWMvd2ViIiwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImF1dGhHcmFudElkIjoiQjNwNlkwU0FaQk1LcUhYM3drTUZDSkcwbVNnLm9aNjdnZmVhWUdpNFJDQ3FCbndUTl9NRC1rUSIsIm5vbmNlIjoidHJ1ZSIsImF1ZCI6ImIzOTM2MTg0MzZlNTExZWM4ZDNkMDI0MmFjMTMwMDAzIiwibmJmIjoxNjY5MzYxNDgxLCJncmFudF90eXBlIjoiYXV0aG9yaXphdGlvbl9jb2RlIiwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJhdXRoX3RpbWUiOjE2NjkzNjE0ODAsInJlYWxtIjoiL3RzZWwvd2VjL3dlYiIsImV4cCI6MTY2OTM2MjM4MSwiaWF0IjoxNjY5MzYxNDgxLCJleHBpcmVzX2luIjo5MDAsImp0aSI6IkIzcDZZMFNBWkJNS3FIWDN3a01GQ0pHMG1TZy4ya2dvVVByWE1lMHc1SVhabTFwUTVIRVhObXMifQ.sfIhZOkkLZLa-x63uYRhnPdVGhi0wOtWWMoHNMOjS6m4nrVv_bsl_fzBI-wAfxAidU-BiNv7UBH5fMwPCchAav6CYuWlPjd2RBzBzwyVHRQZ5bXqRR3uj4nklr-vGYLq5a3Vp0IRNRY7kY-KTFdmpKEnaXc-VuqNDFIDWCO92kY3nz2FuojssV9M6nSRwkDZxvcguS3tGUXYsRm07uX0SF9tbLFD6Ut17Z51tiK_j1y_Y0H_PU5BgP94K4XaNLTy4nbZPgNYbpr_smgli_vfor4euwwl215AaehHEQ6Tn1xnjCoydJBG81ZFKVYxmnS5Z8YVvP0ylUJDslmZK_9QMw" --header "Content-Type:application/json" --header "Accept:application/json" http://localhost:450/merchant-panel/users/detail
+
+
+
+        curl --insecure --header "Accesstoken:eyJ0eXAiOiJKV1QiLCJraWQiOiJ3VTNpZklJYUxPVUFSZVJCL0ZHNmVNMVAxUU09IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIwMTIxYTE2Ni1jMjQwLTQ0NjQtYjhmOS01MjNkMjk2NjA2MGMiLCJjdHMiOiJPQVVUSDJfR1JBTlRfU0VUIiwiYXV0aF9sZXZlbCI6MCwiYXVkaXRUcmFja2luZ0lkIjoiZDUwZGM4ZjItNDIyZC00OGYwLTlhMDYtNWM3NDBjNzJjNzA3LTE2NjM1ODkiLCJpc3MiOiJodHRwczovL2NpYW1hbXByZXBkYXBwLmNpYW0udGVsa29tc2VsLmNvbToxMDAwMy9vcGVuYW0vb2F1dGgyL3RzZWwvd2VjL3dlYiIsInRva2VuTmFtZSI6ImFjY2Vzc190b2tlbiIsInRva2VuX3R5cGUiOiJCZWFyZXIiLCJhdXRoR3JhbnRJZCI6InUzd0I5dXVjUXEySHVtV2ZsS1dRZG9LRUtVby5GMUM4RGk2RFdIajBFTTRBZVBvdm5laU1YazQiLCJub25jZSI6InRydWUiLCJhdWQiOiJiMzkzNjE4NDM2ZTUxMWVjOGQzZDAyNDJhYzEzMDAwMyIsIm5iZiI6MTY2ODQ5NDEzNiwiZ3JhbnRfdHlwZSI6ImF1dGhvcml6YXRpb25fY29kZSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiXSwiYXV0aF90aW1lIjoxNjY4NDk0MTM1LCJyZWFsbSI6Ii90c2VsL3dlYy93ZWIiLCJleHAiOjE2Njg0OTUwMzYsImlhdCI6MTY2ODQ5NDEzNiwiZXhwaXJlc19pbiI6OTAwLCJqdGkiOiJ1M3dCOXV1Y1FxMkh1bVdmbEtXUWRvS0VLVW8uVWRPU3ZvNlE0OWpIeTNmMVpXcnhCYXR1bE9nIn0.bqdCweixnE-_p1QXQZ0JrSukP_5_9G4DZ7VID7ETieV6a9z3efs17HnQROfxviQtXusIRx40bky5XVrVsCaF9829iS2jRkTl_PY8BuIEOXMKv8tqzIAosE6wVF34-BJYGroS2TILbkYlXhXoYMXUtIRMs4ScVF2TB72yRZR90UBlXRFaJfMtnxqz40DJAAaOzN0RC_yYfNEOcYkDcTTcLOvyxXaPT_t6zWwBRlUngVHZ5U3s1Uzh0qq1jDZTmURJB077pR97p_e_mx5HhAneqv0StuNN2GFUCni0Df8miGVYCe_UBShCCkM-IIqjPmz5rJWDdyfMkgoeQQPSIyiIsQ" --header "Content-Type:application/json" --header "Accept:application/json", --request POST --data '{"team_id":"221114134309396954930"}' https://43.255.196.44/api/merchant-panel/264/users/2694a712-66ca-41e0-a14b-253a96815e4b/update
+
+        POST /api/merchant-panel/264/users/2694a712-66ca-41e0-a14b-253a96815e4b/update HTTP/1.1
+Host: 43.255.196.44
+Cookie: _ga_DZYTS8T571=GS1.1.1668492961.3.1.1668494131.60.0.0; _ga=GA1.1.1918154018.1668484650; _gid=GA1.1.914832186.1668485032; _gcl_au=1.1.792895629.1668492788; _ga_FNKQPV142Y=GS1.1.1668492788.1.0.1668492791.57.0.0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: application/json, text/plain, */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Device-Id: 4e502cc2-ad70-4ae8-8c9e-65e928f78ecd
+Content-Type: application/json
+X-Url-Payload: T7To2wtSwlyjy6UORZC0Iw==
+Accesstoken: eyJ0eXAiOiJKV1QiLCJraWQiOiJ3VTNpZklJYUxPVUFSZVJCL0ZHNmVNMVAxUU09IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIwMTIxYTE2Ni1jMjQwLTQ0NjQtYjhmOS01MjNkMjk2NjA2MGMiLCJjdHMiOiJPQVVUSDJfR1JBTlRfU0VUIiwiYXV0aF9sZXZlbCI6MCwiYXVkaXRUcmFja2luZ0lkIjoiZDUwZGM4ZjItNDIyZC00OGYwLTlhMDYtNWM3NDBjNzJjNzA3LTE2NjM1ODkiLCJpc3MiOiJodHRwczovL2NpYW1hbXByZXBkYXBwLmNpYW0udGVsa29tc2VsLmNvbToxMDAwMy9vcGVuYW0vb2F1dGgyL3RzZWwvd2VjL3dlYiIsInRva2VuTmFtZSI6ImFjY2Vzc190b2tlbiIsInRva2VuX3R5cGUiOiJCZWFyZXIiLCJhdXRoR3JhbnRJZCI6InUzd0I5dXVjUXEySHVtV2ZsS1dRZG9LRUtVby5GMUM4RGk2RFdIajBFTTRBZVBvdm5laU1YazQiLCJub25jZSI6InRydWUiLCJhdWQiOiJiMzkzNjE4NDM2ZTUxMWVjOGQzZDAyNDJhYzEzMDAwMyIsIm5iZiI6MTY2ODQ5NDEzNiwiZ3JhbnRfdHlwZSI6ImF1dGhvcml6YXRpb25fY29kZSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiXSwiYXV0aF90aW1lIjoxNjY4NDk0MTM1LCJyZWFsbSI6Ii90c2VsL3dlYy93ZWIiLCJleHAiOjE2Njg0OTUwMzYsImlhdCI6MTY2ODQ5NDEzNiwiZXhwaXJlc19pbiI6OTAwLCJqdGkiOiJ1M3dCOXV1Y1FxMkh1bVdmbEtXUWRvS0VLVW8uVWRPU3ZvNlE0OWpIeTNmMVpXcnhCYXR1bE9nIn0.bqdCweixnE-_p1QXQZ0JrSukP_5_9G4DZ7VID7ETieV6a9z3efs17HnQROfxviQtXusIRx40bky5XVrVsCaF9829iS2jRkTl_PY8BuIEOXMKv8tqzIAosE6wVF34-BJYGroS2TILbkYlXhXoYMXUtIRMs4ScVF2TB72yRZR90UBlXRFaJfMtnxqz40DJAAaOzN0RC_yYfNEOcYkDcTTcLOvyxXaPT_t6zWwBRlUngVHZ5U3s1Uzh0qq1jDZTmURJB077pR97p_e_mx5HhAneqv0StuNN2GFUCni0Df8miGVYCe_UBShCCkM-IIqjPmz5rJWDdyfMkgoeQQPSIyiIsQ
+Content-Length: 260
+Origin: https://43.255.196.44
+Authorization: Basic c29mdGVuZ2luZTpEMTk0TnQhRHVMdTRqNA==
+Referer: https://43.255.196.44/merchant/dashboard/wectestadmin/user/role/edit-user/2694a712-66ca-41e0-a14b-253a96815e4b
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Te: trailers
+Connection: close
+
+{"user_id":"2694a712-66ca-41e0-a14b-253a96815e4b","role_id":"1","team_id":{"team_id":"221114134309396954930","merchant_id":264,"team_name":"Team kikuk","created_at":"2022-11-14T13:43:09Z","updated_at":"2022-11-14T13:43:09Z","total_member":4,"last_invoice":""}}

@@ -1,0 +1,30 @@
+https://api.digitalcore.telkomsel.co.id/preprod-web/scrt/esb/v1/online-orders/partner
+
+curl -X POST -H 'TRANSACTIONID: 230306095903815053570' -H 'CHANNELID: b0' -H 'api_key: eedfevw8q7rym4zhdsa64cma' -H 'x-signature:4a14cf77d0a34bbbb4184cfde779783b' -H 'Content-Type: application/json' -H 'Accept: application/json' --data '{"transaction":{"transaction_id":"230306095903815053570","channel":"b0"},"order":{"order_type":"EP","order_sub_type":"Online","order_mode":"ASSISTED","order_receiver_email":"ademawan1210@gmail.com","bu_code":"TOOS|4","customer":{"name":"Ade Mawan","subscriber_type":"Postpaid","secondary_contact_number":"6281221997456"},"externalpartner_orders":[{"service_id":"628112853752","item_price":0,"credit_limit_service":200000,"offers":[{"offer_id":"00056704","offer_name":"Halo+ Device 100K","offer_price":0,"offer_tax":0,"contract_period_value":1,"contract_period_uom":"Month"}]}],"partner":{"partner_name":"TOKO BAJU STM BC","partner_type":"OFFLINE","partner_address":"ERAPHONE JAYAPURA","transaction_identifier":"ERF/02/03/2023","transaction_identifier_type":"INVOICE"},"payment_amount":{"total_amount":0,"product_fee":0,"delivery_fee":0}}}' 'https://api.digitalcore.telkomsel.co.id/preprod-web/scrt/esb/v1/online-orders/partner' -ik
+
+
+url := os.Getenv("URL_DIGICORE")
+	path := os.Getenv("PATH_ORDER")
+
+    request.Header.Set("Content-Type", "application/json")
+	request.Header.Set("Accept", "application/json")
+	request.Header.Set("api_key", os.Getenv("API_KEY"))
+	request.Header.Set("x-signature", helper.GenerateSignature())
+
+    {"transaction":{"transaction_id":"230302110921248885630","channel":"b0"},"order":{"order_type":"EP","order_sub_type":"Online","order_mode":"ASSISTED","order_receiver_email":"ademawan1210@gmail.com","bu_code":"TOOS|4","customer":{"name":"Ade Mawan","subscriber_type":"Postpaid","secondary_contact_number":"6281221997456"},"externalpartner_orders":[{"service_id":"628112853709","item_price":0,"credit_limit_service":200000,"offers":[{"offer_id":"00056704","offer_name":"Halo+ Device 100K","offer_price":0,"offer_tax":0,"contract_period_value":1,"contract_period_uom":"Month"}]}],"partner":{"partner_name":"TOKO BAJU STM BC","partner_type":"OFFLINE","partner_address":"ERAPHONE JAYAPURA","transaction_identifier":"ERF/TEST/03/2023","transaction_identifier_type":"INVOICE"},"payment_amount":{"total_amount":0,"product_fee":0,"delivery_fee":0}}}
+
+    {"transaction":{"transaction_id":"230302115339683786910","channel":"b0","status_code":"30RV-0002","status_desc":"Service Provider Error: RV - Could not get the Eligible Price Information"}}
+
+    {"transaction":{"transaction_id":"230302120518673653870","channel":"b0","status_code":"30RV-0001","status_desc":"Service Provider Error: RV - Could not get the Eligible Product Information"}}
+
+
+
+
+req.Header.Set("Accept", helper.HTTPContentTypeJSON)
+	req.Header.Set(helper.HTTPHeaderKeyContentType, helper.HTTPContentTypeJSON)
+	req.Header.Set("Api_key", apiKey)
+	req.Header.Set("X-Signature", helper.GetSignature())
+	req.Header.Set("X-Id", param.Msisdn)
+
+    ///similarity halo form
+    curl -X POST -H 'X-Id: 628111310140' -H 'Api_key: eedfevw8q7rym4zhdsa64cma' -H 'X-Signature:111089534f984b1a36cdbbc7818c61dc' -H 'Content-Type: application/json' -H 'Accept: application/json' --data '{"msisdn": "628111310140"}' 'https://api.digitalcore.telkomsel.co.id/preprod-web/scrt/sz/devsimilarity/v2/upload-selfie-image?blur_detection=true' -ik
