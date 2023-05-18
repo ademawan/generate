@@ -1,0 +1,1 @@
+https://sourcegraph.com/github.com/redis/go-redis/-/blob/example_test.go

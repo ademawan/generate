@@ -1,3 +1,7 @@
 go test -bench=.
 
 go test -bench=. -benchtime=1000000x -benchmem
+
+ 1000000             43848 ns/op             144 B/op          9 allocs/op
+PASS
+ok      generate/benchmark_test 43.850s

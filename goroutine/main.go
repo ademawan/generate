@@ -21,6 +21,7 @@ func main() {
 	}
 
 	WithGoroutine(input)
+
 	NoGoroutine(input)
 	memoryConsume()
 	example1()

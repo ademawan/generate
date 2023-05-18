@@ -11,7 +11,7 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/SebastiaanKlippert/go-wkhtmltopdf"
+	wkhtmltopdf "github.com/SebastiaanKlippert/go-wkhtmltopdf"
 )
 
 type JsonReservationDetailParam struct {

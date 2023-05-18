@@ -56,6 +56,12 @@
 		},
 		{
 			"path": "mux"
+		},
+		{
+			"path": "mp_reset_password"
+		},
+		{
+			"path": "tc"
 		}
 	]
 }
