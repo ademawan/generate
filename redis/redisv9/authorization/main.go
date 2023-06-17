@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"log"
 	"os"
@@ -10,6 +11,26 @@ import (
 
 	redis "github.com/redis/go-redis/v9"
 )
+
+type UserInfo struct {
+	MerchantID  int    `json:"merchant_id" redis:"merchant_id"`
+	RoleID      string `json:"role_id" redis:"role_id"`
+	Permissions string `json:"permissions" redis:"permissions"`
+	UUID        string `json:"uuid" redis:"uuid"`
+	IsMerchant  bool   `json:"is_merchant" redis:"is_merchant"`
+	CreatedAt   string `json:"created_at" redis:"created_at"`
+	AccessToken string `json:"access_token" redis:"access_token"`
+}
+
+// userInfo["merchant_id"] = merchantID
+// userInfo["role_id"] = roleID
+// userInfo["permissions"] = permissionsString
+// userInfo["uuid"] = userData.Uuid
+// userInfo["is_merchant"] = userData.IsMerchant
+// userInfo["created_at"] = createdAt
+
+// merchants/sessions/{mercahant_id}/{uuid}/{device_id} userinfo
+// merchants/refresh/{mercahant_id}/{uuid}/{device_id} userinfo
 
 var (
 	getEnv      = os.Getenv
@@ -23,9 +44,25 @@ var (
 )
 
 func main() {
-	hashName := "folder_fmc"
-	prefixName := "sso_token"
-	key := hashName + ":" + prefixName + "abc"
+	// hashName := "folder_fmc"
+	// prefixName := "sso_token"
+	key := "merchants:sessions:11:uuidxxxxxx:deviceid01"
+	data := UserInfo{}
+	data.MerchantID = 11
+	data.RoleID = "MP001"
+	data.Permissions = "SOS01|SOS02|XOS01"
+	data.UUID = "uuid1xxxxxx"
+	data.IsMerchant = true
+	data.AccessToken = "eyJ0eXAiOiJKV1QiLCJraWQiOiJ3VTNpZklJYUxPVUFSZVJCL0ZHNmVNMVAxUU09IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIzMzNmM2I5Yi1jNzI2LTQzYzAtOTQ1ZS03NTQ1YTcyZWY3ZWQiLCJjdHMiOiJPQVVUSDJfU1RBVEVMRVNTX0dSQU5UIiwiYXV0aF9sZXZlbCI6MCwiYXVkaXRUcmFja2luZ0lkIjoiNmYwYzk0YzgtZDMwOC00MzBhLTkyYzAtZTM1NDhlYWFmZWUxLTQxOTYyIiwic3VibmFtZSI6IjMzM2YzYjliLWM3MjYtNDNjMC05NDVlLTc1NDVhNzJlZjdlZCIsImlzcyI6Imh0dHBzOi8vYW06NDQzL2FtL29hdXRoMi90c2VsL3dlYy93ZWIiLCJ0b2tlbk5hbWUiOiJhY2Nlc3NfdG9rZW4iLCJ0b2tlbl90eXBlIjoiQmVhcmVyIiwiYXV0aEdyYW50SWQiOiJ4dHRVT09MUnZpd0Zrc05PR2ZGSkpZSE5YME0iLCJub25jZSI6InRydWUiLCJhdWQiOiJiMzkzNjE4NDM2ZTUxMWVjOGQzZDAyNDJhYzEzMDAwMyIsIm5iZiI6MTY4NDcyNTg5NywiZ3JhbnRfdHlwZSI6ImF1dGhvcml6YXRpb25fY29kZSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiXSwiYXV0aF90aW1lIjoxNjg0NzI1ODk2LCJyZWFsbSI6Ii90c2VsL3dlYy93ZWIiLCJleHAiOjE2ODQ3MjY3OTcsImlhdCI6MTY4NDcyNTg5NywiZXhwaXJlc19pbiI6OTAwLCJqdGkiOiJuTTMwRy1uVnVTUXJENTFEcGlLS1JuR2UxOHcifQ.j8ts7EG071Zk3m_xIltMhfEEk8TRAe_H0t588EXiE2MzQGCgreO8YvTceAogT_ENMQj9qMOJrSe4A2uP2JB5xroyEdqLSzQIJ8vKuSiJQQ-xNxs8ywAw5OwjzxnhxKofDyr7rraCFN4XFwzGRYuBGLjfokrY8nBhgITLEpRB16gzfslSO9WbvdoQiyuR9OYBqhU2zNahSxzEg3aKtQXuwzCrYx-PzX3ck9wx_DGzNoDs0qdwBU_X0skdcpxp3YjouSraF0vSM4WlXT9qY16qXlE-0ofbNH1TaXiqYBzomWRnexcv31B4Bs2KcVTK3A_lqy6xN0bJ2Bp8_RAel8NH1Q"
+
+	// data := map[string]interface{}{}
+	// data["mercahnt_id"] = "11"
+	// data["role_id"] = "MP001"
+	// data["permissions"] = "SOS01|SOS02|XOS01"
+	// data["uuid"] = "uuid1xxxxxx"
+
+	// data["access_token"] = []string{"eyJ0eXAiOiJKV1QiLCJraWQiOiJ3VTNpZklJYUxPVUFSZVJCL0ZHNmVNMVAxUU09IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIzMzNmM2I5Yi1jNzI2LTQzYzAtOTQ1ZS03NTQ1YTcyZWY3ZWQiLCJjdHMiOiJPQVVUSDJfU1RBVEVMRVNTX0dSQU5UIiwiYXV0aF9sZXZlbCI6MCwiYXVkaXRUcmFja2luZ0lkIjoiNmYwYzk0YzgtZDMwOC00MzBhLTkyYzAtZTM1NDhlYWFmZWUxLTQxOTYyIiwic3VibmFtZSI6IjMzM2YzYjliLWM3MjYtNDNjMC05NDVlLTc1NDVhNzJlZjdlZCIsImlzcyI6Imh0dHBzOi8vYW06NDQzL2FtL29hdXRoMi90c2VsL3dlYy93ZWIiLCJ0b2tlbk5hbWUiOiJhY2Nlc3NfdG9rZW4iLCJ0b2tlbl90eXBlIjoiQmVhcmVyIiwiYXV0aEdyYW50SWQiOiJ4dHRVT09MUnZpd0Zrc05PR2ZGSkpZSE5YME0iLCJub25jZSI6InRydWUiLCJhdWQiOiJiMzkzNjE4NDM2ZTUxMWVjOGQzZDAyNDJhYzEzMDAwMyIsIm5iZiI6MTY4NDcyNTg5NywiZ3JhbnRfdHlwZSI6ImF1dGhvcml6YXRpb25fY29kZSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiXSwiYXV0aF90aW1lIjoxNjg0NzI1ODk2LCJyZWFsbSI6Ii90c2VsL3dlYy93ZWIiLCJleHAiOjE2ODQ3MjY3OTcsImlhdCI6MTY4NDcyNTg5NywiZXhwaXJlc19pbiI6OTAwLCJqdGkiOiJuTTMwRy1uVnVTUXJENTFEcGlLS1JuR2UxOHcifQ.j8ts7EG071Zk3m_xIltMhfEEk8TRAe_H0t588EXiE2MzQGCgreO8YvTceAogT_ENMQj9qMOJrSe4A2uP2JB5xroyEdqLSzQIJ8vKuSiJQQ-xNxs8ywAw5OwjzxnhxKofDyr7rraCFN4XFwzGRYuBGLjfokrY8nBhgITLEpRB16gzfslSO9WbvdoQiyuR9OYBqhU2zNahSxzEg3aKtQXuwzCrYx-PzX3ck9wx_DGzNoDs0qdwBU_X0skdcpxp3YjouSraF0vSM4WlXT9qY16qXlE-0ofbNH1TaXiqYBzomWRnexcv31B4Bs2KcVTK3A_lqy6xN0bJ2Bp8_RAel8NH1Q", "eyJ0eXAiOiJKV1QiLCJraWQiOiJ3VTNpZklJYUxPVUFSZVJCL0ZHNmVNMVAxUU09IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIzMzNmM2I5Yi1jNzI2LTQzYzAtOTQ1ZS03NTQ1YTcyZWY3ZWQiLCJjdHMiOiJPQVVUSDJfU1RBVEVMRVNTX0dSQU5UIiwiYXV0aF9sZXZlbCI6MCwiYXVkaXRUcmFja2luZ0lkIjoiNmYwYzk0YzgtZDMwOC00MzBhLTkyYzAtZTM1NDhlYWFmZWUxLTQxOTYyIiwic3VibmFtZSI6IjMzM2YzYjliLWM3MjYtNDNjMC05NDVlLTc1NDVhNzJlZjdlZCIsImlzcyI6Imh0dHBzOi8vYW06NDQzL2FtL29hdXRoMi90c2VsL3dlYy93ZWIiLCJ0b2tlbk5hbWUiOiJhY2Nlc3NfdG9rZW4iLCJ0b2tlbl90eXBlIjoiQmVhcmVyIiwiYXV0aEdyYW50SWQiOiJ4dHRVT09MUnZpd0Zrc05PR2ZGSkpZSE5YME0iLCJub25jZSI6InRydWUiLCJhdWQiOiJiMzkzNjE4NDM2ZTUxMWVjOGQzZDAyNDJhYzEzMDAwMyIsIm5iZiI6MTY4NDcyNTg5NywiZ3JhbnRfdHlwZSI6ImF1dGhvcml6YXRpb25fY29kZSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiXSwiYXV0aF90aW1lIjoxNjg0NzI1ODk2LCJyZWFsbSI6Ii90c2VsL3dlYy93ZWIiLCJleHAiOjE2ODQ3MjY3OTcsImlhdCI6MTY4NDcyNTg5NywiZXhwaXJlc19pbiI6OTAwLCJqdGkiOiJuTTMwRy1uVnVTUXJENTFEcGlLS1JuR2UxOHcifQ.j8ts7EG071Zk3m_xIltMhfEEk8TRAe_H0t588EXiE2MzQGCgreO8YvTceAogT_ENMQj9qMOJrSe4A2uP2JB5xroyEdqLSzQIJ8vKuSiJQQ-xNxs8ywAw5OwjzxnhxKofDyr7rraCFN4XFwzGRYuBGLjfokrY8nBhgITLEpRB16gzfslSO9WbvdoQiyuR9OYBqhU2zNahSxzEg3aKtQXuwzCrYx-PzX3ck9wx_DGzNoDs0qdwBU_X0skdcpxp3YjouSraF0vSM4WlXT9qY16qXlE-0ofbNH1TaXiqYBzomWRnexcv31B4Bs2KcVTK3A_lqy6xN0bJ2Bp8_RAe000002"}
+	// x, _ := json.Marshal(data)
 	redisClient, err := NewRedis()
 	if err != nil {
 		panic(err)
@@ -34,13 +71,13 @@ func main() {
 
 	redisRepo := NewRedisRepository(redisClient)
 	fmt.Println(key)
-	items := ExampleUser{"jane", 22}
+	// items := ExampleUser{"jane", 22}
 	Del(key, redisClient)
-	err = redisRepo.HandlerHSet(key+"AA", items)
-	if err != nil {
-		panic(err)
-	}
-	err = redisRepo.HandlerHSet(key+"BB", ExampleUser{Name: "Mawan", Age: 55})
+	// err = redisRepo.HandlerHSet(key+"AA", items)
+	// if err != nil {
+	// 	panic(err)
+	// }
+	err = redisRepo.HandlerHSet(key, data)
 	if err != nil {
 		panic(err)
 	}
@@ -48,6 +85,38 @@ func main() {
 	res2 := redisRepo.HandlerHGetAll(key)
 	fmt.Println(len(res2["age"]))
 	fmt.Println(res2)
+
+	dataSet, _ := json.Marshal(data)
+	redisRepo.Set(key+"AA", dataSet, 60)
+	res, err := redisRepo.Get(key + "AA")
+	if err != nil {
+		if err == redis.Nil {
+			fmt.Println(fmt.Sprintf("ERROR GET %v", err.Error()))
+
+		}
+		return
+	}
+	fmt.Println(fmt.Sprintf("SUCCESS GET %v", res))
+	fmt.Println("RESSSSSS:", res)
+	data2 := UserInfo{}
+	err = json.Unmarshal([]byte(res), &data2)
+	if err != nil {
+		panic(err)
+	}
+	_, err = redisRepo.GetKeys("merchants:sessions:11:uuidxxxxxx*")
+	if err != nil {
+		panic(err)
+	}
+
+	// for _, val := range keys {
+	// 	redisClient.Del(context.Background(), val)
+
+	// }
+	// redisRepo.GetKeys("merchants:sessions:11:uuidxxxxxx*")
+	// fmt.Println(keys)
+	// fmt.Println(fmt.Printf("==========================%v========================================", data2))
+	// redisRepo.HandlerHMSet()
+	// redisRepo.HandlerHMGet()
 
 	// }
 
@@ -103,14 +172,10 @@ func NewRedisRepository(redis *redis.Client) *RedisRepository {
 	return &RedisRepository{redis: redis}
 }
 
-func (r *RedisRepository) Set(key string, value interface{}) error {
+func (r *RedisRepository) Set(key string, value interface{}, duration int) error {
 	ctx := context.Background()
 
-	ttl, err := strconv.Atoi("999")
-	if err != nil {
-		return err
-	}
-	err = r.redis.Set(ctx, key, value, time.Duration(ttl)*time.Second).Err()
+	err := r.redis.Set(ctx, key, value, time.Duration(duration)*time.Second).Err()
 
 	if err != nil {
 		fmt.Println("err redis", err)
@@ -119,10 +184,10 @@ func (r *RedisRepository) Set(key string, value interface{}) error {
 
 	return nil
 }
-func (r *RedisRepository) Get(key string) (int64, error) {
+func (r *RedisRepository) Get(key string) (string, error) {
 	ctx := context.Background()
 
-	dataRedis, err := r.redis.Get(ctx, key).Int64()
+	dataRedis, err := r.redis.Get(ctx, key).Result()
 	if err != nil {
 
 		log.Println("error get inqury redis", err)
@@ -136,6 +201,19 @@ func Del(key string, redis *redis.Client) (int64, error) {
 	defer cancel()
 
 	countDelete, err := redis.Del(ctx, key).Result()
+	if err != nil {
+
+		log.Println("error get inqury redis", err)
+		return countDelete, err
+	}
+
+	return countDelete, nil
+}
+func XDel(key string, redis *redis.Client) (int64, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
+
+	countDelete, err := redis.XDel(ctx, key).Result()
 	if err != nil {
 
 		log.Println("error get inqury redis", err)
@@ -163,7 +241,7 @@ type ExampleUser struct {
 	Age  int    `redis:"age"`
 }
 
-func (r *RedisRepository) HandlerHSet(key string, val ExampleUser) error {
+func (r *RedisRepository) HandlerHSet(key string, val interface{}) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 
@@ -179,6 +257,97 @@ func (r *RedisRepository) HandlerHGetAll(key string) map[string]string {
 	defer cancel()
 
 	res := r.redis.HGetAll(ctx, key).Val()
+	data := &UserInfo{}
+	// jsonData, _ := json.Marshal(res)
+	// json.Unmarshal(jsonData, &data)
+	for k, v := range res {
+		switch k {
+		case "merchant_id":
+			data.MerchantID, _ = strconv.Atoi(v)
+		case "role_id":
+			data.RoleID = v
+		case "permissions":
+			data.Permissions = v
+		case "uuid":
+			data.UUID = v
+		case "is_merchant":
+			data.IsMerchant, _ = strconv.ParseBool(v)
+		case "created_at":
+			data.CreatedAt = v
+		case "access_token":
+			data.AccessToken = v
+		}
+
+	}
+	fmt.Println("DATA:", data)
+
+	fmt.Println(fmt.Sprintf("====================%v========================", data.IsMerchant))
 
 	return res
+}
+
+func (r *RedisRepository) HandlerHMSet() {
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
+	r.redis.FlushDB(ctx)
+	err := r.redis.MSet(ctx,
+		"name", "hello",
+		"count", 123,
+		"correct", true).Err()
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("SUCCESS HandlerHMSet")
+	// Output: {hello 123 true}
+}
+
+func (r *RedisRepository) HandlerHMGet() {
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
+
+	res := r.redis.MGet(ctx, "name", "count", "empty", "correct")
+	if res.Err() != nil {
+		panic(res.Err())
+	}
+
+	type data struct {
+		Name    string `redis:"name"`
+		Count   int    `redis:"count"`
+		Correct bool   `redis:"correct"`
+	}
+
+	// Scan the results into the struct.
+	var d data
+	if err := res.Scan(&d); err != nil {
+		panic(err)
+	}
+
+	fmt.Println(d)
+	fmt.Println("SUCCESS HandlerHMGet")
+
+	// Output: {hello 123 true}
+}
+func (r *RedisRepository) GetKeys(prefixKey string) ([]string, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
+	var cursor uint64
+	var keys []string
+	for {
+
+		var err error
+		keys, cursor, err = r.redis.Scan(ctx, cursor, prefixKey, 0).Result()
+		if err != nil {
+			return []string{}, err
+		}
+
+		for _, key := range keys {
+			fmt.Println("key", key)
+		}
+
+		if cursor == 0 { // no more keys
+			break
+		}
+	}
+	return keys, nil
 }

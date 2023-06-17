@@ -1,0 +1,8 @@
+mode: set
+unit-test/controllers/user/user.go:13.53,15.2 1 1
+unit-test/controllers/user/user.go:16.59,19.16 2 1
+unit-test/controllers/user/user.go:19.16,22.3 2 1
+unit-test/controllers/user/user.go:24.2,25.17 2 1
+unit-test/controllers/user/user.go:28.59,31.16 2 0
+unit-test/controllers/user/user.go:31.16,34.3 2 0
+unit-test/controllers/user/user.go:36.2,37.17 2 0

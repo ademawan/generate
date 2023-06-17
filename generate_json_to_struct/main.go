@@ -39,6 +39,11 @@ type Extended struct {
 	Email    string
 	Password string
 }
+type Tc struct {
+	Name   string `json:"name"`
+	Age    int    `json:"age"`
+	Alamat string `json:",omitempty"`
+}
 
 // type ResponseSubscriberProfile struct {
 // 	Profiles Profiles `json:"profile"`
@@ -69,10 +74,17 @@ func main() {
 
 	var data []byte
 	GetFileJson("", "file", "json", &data)
-	fmt.Println(data)
+	var d []byte
+
+	GetFileJson("", "tc", "json", &d)
+
+	// fmt.Println(data)
 	dataMap := make(map[string]interface{})
-	json.Unmarshal(data, &dataMap)
-	fmt.Println(dataMap)
+	tc := Tc{}
+	json.Unmarshal(d, &tc)
+	fmt.Println(tc)
+	// json.Unmarshal(data, &dataMap)
+	// fmt.Println(dataMap)
 
 	GenerateMapToStruct(dataMap, "coba", "test")
 

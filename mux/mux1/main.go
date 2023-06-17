@@ -5,6 +5,7 @@ import (
 	"crypto/tls"
 	"encoding/json"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 	"math"
@@ -17,6 +18,15 @@ import (
 
 	"github.com/gorilla/mux"
 )
+
+var clientDo = func(req *http.Request) (*http.Response, error) {
+	var c io.ReadCloser
+	return &http.Response{StatusCode: 200, Body: c}, nil
+}
+
+type Closer interface {
+	Close() error
+}
 
 func main() {
 	t := NewHandler()
@@ -106,6 +116,7 @@ func UseCasePPOB() *Data {
 		fmt.Println(err.Error())
 	}
 	defer res.Body.Close()
+
 	curl := GenerateCURL(http)
 	fmt.Println(curl)
 

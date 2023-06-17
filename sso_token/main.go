@@ -6,59 +6,60 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"strconv"
+	"math"
 	"strings"
 	"time"
 )
 
-type TransformingInformation struct {
-	Data string
-}
-
 var (
 	cipherNewCBCDecrypter = cipher.NewCBCDecrypter
-	helperMyTselDecrypt   = MyTselDecrypt
-	helperMyTselDecrypt2  = MyTselDecrypt
 	aesNewCipher          = aes.NewCipher
 	hexDecodeString       = hex.DecodeString
 )
 
 func main() {
-	var custparam = "014c5c93ac762d638512d56f25ef5e64-d1d1a6ba77be129364ac7152243f5215e1006c400dee0e880888f81e2e10c3ac37045d35cefaca9912825cef94dd83564805e37bf55e145c0fd79b1d538926206239f4ffcdc21ad6ac47ee68a3cf309e4f5a8e0e2c48665ea7df09db85dad097"
-	decrypt1, err := helperMyTselDecrypt(custparam)
+	custparam := "014c5c93ac762d638512d56f25ef5e64-d1d1a6ba77be129364ac7152243f5215e1006c400dee0e880888f81e2e10c3ac37045d35cefaca9912825cef94dd83564805e37bf55e145c0fd79b1d538926206239f4ffcdc21ad6ac47ee68a3cf309e4f5a8e0e2c48665ea7df09db85dad097"
+	decrypt1, err := MyTselDecrypt(custparam)
 	if err != nil {
-		fmt.Println("error 0")
-
-		panic(err)
+		fmt.Println("error x")
 	}
-
+	fmt.Println("first decrypt", decrypt1)
 	splt := strings.Split(decrypt1, "|")
 	str := splt[1]
 	cut := str[:len(str)-3]
 	tmp1, _ := time.Parse("060102150405", cut)
 	tmp := tmp1.Local()
 	fmt.Println("timestamp", str)
-	ssoexpired, _ := strconv.Atoi("9999")
+	ssoexpired := 60
 	tmp2 := tmp.Add(time.Minute * time.Duration(ssoexpired))
 
+	duration := time.Since(tmp2)
+	fmt.Println("TIME SINCE :", int(math.Abs(duration.Seconds())), tmp)
+	fmt.Println("TIME COMPARE", tmp2.Unix(), time.Now().Unix())
+	fmt.Println("TMP2", tmp2, int(tmp2.Unix())-(int(time.Now().Unix())+25200))
+	fmt.Println("xxxx ", time.Duration(ssoexpired)*time.Minute)
+	fmt.Println("xxxx ", time.Duration(int(tmp2.Unix()-time.Now().Unix())-1)*time.Second)
+	x := time.Now().Add(time.Minute * time.Duration(300))
+	fmt.Println(x)
+	fmt.Println("ZZZ ", int(tmp2.Unix()-x.Unix()))
+
 	if tmp2.Unix() < time.Now().Unix() {
-		fmt.Println("error 1")
-		panic(err)
+		fmt.Println("sso token expired")
 	}
-	msisdn, err := helperMyTselDecrypt2(splt[0])
+	msisdn, err := MyTselDecrypt(splt[0])
+	if err != nil {
+		fmt.Println("error")
+	}
+	msisdn2 := strings.ReplaceAll(msisdn, " ", "")
+	fmt.Println("index 0", splt[0], "msisdn", msisdn2+"msisdn")
+
 	if err != nil {
 		fmt.Println("error 2")
-
-		panic(err)
 	}
-	fmt.Println("h")
-	msisdn2 := strings.ReplaceAll(msisdn, " ", "")
-	fmt.Println("MSISDN:", msisdn2)
-
 }
 
 func MyTselDecrypt(encrypted string) (string, error) {
-	tselKey := "GDJVesGYZJNEVUU7UhgGEhwBa8fv5nmk"
+	tselKey := "BdjFKfZJ5lKG9kqaDYrNwNhTilrqOECB"
 	key := []byte(tselKey)
 	concat := strings.Replace(encrypted, "-", "", -1)
 	cipherText, _ := hexDecodeString(concat)
@@ -76,15 +77,20 @@ func MyTselDecrypt(encrypted string) (string, error) {
 	}
 	mode := cipherNewCBCDecrypter(block, iv)
 	mode.CryptBlocks(cipherText, cipherText)
-	// cipherText, _ = Unpad(cipherText, aes.BlockSize)
 	cipherText, err = Unpad(cipherText, aes.BlockSize)
 	if err != nil {
 		return "", err
 	}
-
 	chiperString := fmt.Sprintf("%s", cipherText)
 	encrypted = chiperString
-
+	// if x == 1 {
+	// 	fmt.Println("1")
+	// 	return nil
+	// }
+	// x -= 1
+	// fmt.Println(x)
+	// //fmt.Println(chiperString)
+	// TselDecrypt(ar, tselKey, x)
 	return encrypted, nil
 }
 
