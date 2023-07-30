@@ -2,9 +2,9 @@ package user_test
 
 import (
 	"errors"
+	"service-example/controllers/user"
+	"service-example/entities"
 	"testing"
-	"unit-test/controllers/user"
-	"unit-test/entities"
 
 	"github.com/stretchr/testify/assert"
 )

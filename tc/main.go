@@ -15,6 +15,13 @@ type TransformingInformation struct {
 	Data string
 }
 
+type TCStruct struct {
+	Name string
+	Age  int
+}
+type ChildStruct struct {
+}
+
 var (
 	cipherNewCBCDecrypter = cipher.NewCBCDecrypter
 	helperMyTselDecrypt   = MyTselDecrypt
@@ -24,6 +31,14 @@ var (
 )
 
 func main() {
+
+	tcStruct := []*TCStruct{}
+
+	var tcStruct2 []*TCStruct
+	tcStruct3 := []*TCStruct{}
+	tcStruct3 = append(tcStruct3, &TCStruct{})
+	fmt.Println(tcStruct, tcStruct2, tcStruct3)
+	//==============================================
 	var custparam = "014c5c93ac762d638512d56f25ef5e64-d1d1a6ba77be129364ac7152243f5215e1006c400dee0e880888f81e2e10c3ac37045d35cefaca9912825cef94dd83564805e37bf55e145c0fd79b1d538926206239f4ffcdc21ad6ac47ee68a3cf309e4f5a8e0e2c48665ea7df09db85dad097"
 	decrypt1, err := helperMyTselDecrypt(custparam)
 	if err != nil {
@@ -31,6 +46,8 @@ func main() {
 
 		panic(err)
 	}
+
+	fmt.Println(fmt.Sprintf("%v", true))
 
 	splt := strings.Split(decrypt1, "|")
 	str := splt[1]

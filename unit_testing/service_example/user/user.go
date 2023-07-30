@@ -2,8 +2,8 @@ package user
 
 import (
 	"fmt"
-	"unit-test/entities"
-	"unit-test/repository/user"
+	"service-example/entities"
+	"service-example/repository/user"
 )
 
 type UserController struct {

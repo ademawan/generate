@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"service-store-page/helper"
+	"os"
 )
 
 type (
@@ -82,7 +82,7 @@ func main() {
 }
 
 func GetJson(baseDir, fileName string, data interface{}) {
-	jsonFile, err := helper.OsOpen(baseDir + "file/" + fileName + ".json")
+	jsonFile, err := os.Open(baseDir + "file/" + fileName + ".json")
 	if err != nil {
 
 		fmt.Println(err.Error())
@@ -90,7 +90,7 @@ func GetJson(baseDir, fileName string, data interface{}) {
 
 	defer jsonFile.Close()
 
-	byteValue, err := helper.IoutilReadAll(jsonFile)
+	byteValue, err := ioutil.ReadAll(jsonFile)
 	if err != nil {
 		fmt.Println(err.Error())
 	}

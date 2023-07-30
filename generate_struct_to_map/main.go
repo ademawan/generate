@@ -7,6 +7,7 @@ import (
 	"reflect"
 	"strconv"
 	"strings"
+	"time"
 	"unicode"
 )
 
@@ -284,6 +285,27 @@ type InvoiceHaloPlus struct {
 	ActivePeriode        string
 	AuthId               string
 }
+type LogV2 struct {
+	Type         string
+	Request      interface{}
+	Response     interface{}
+	Message      string
+	Event        string
+	StatusCode   int
+	Method       string
+	ResponseTime time.Duration
+}
+type Loge2e struct {
+	Event        string
+	StatusCode   int
+	ResponseTime time.Duration
+	Method       string
+	Request      interface{}
+	URL          string
+	Message      string
+	Tag          string
+	OrderNumber  string
+}
 
 func main() {
 	// generator := rogerdev_generator.New()
@@ -303,7 +325,7 @@ func main() {
 	// GenerateMapToStruct(dataMap, "coba", "test")
 	// getPropertyInfo(&st)
 	generateToMap(&MerchantRequestCreate{})
-	generateToStruct(&InvoiceBill{})
+	generateToStruct(&Loge2e{})
 
 }
 func getPropertyInfo(s interface{}) {

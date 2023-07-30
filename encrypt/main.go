@@ -11,6 +11,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"encoding/pem"
+	"encrypt/aes_cbc"
 	"errors"
 	"fmt"
 	"math/big"
@@ -58,10 +59,41 @@ func main() {
 	// 	fmt.Println(err.Error())
 	// }
 	// fmt.Println("tes", data)
-	err3 := TselDecrypt(transformingInformation, "BdjFKfZJ5lKG9kqaDYrNwNhTilrqOECB", 2)
-	if err3 != nil {
-		fmt.Println(err3.Error())
+	// err3 := TselDecrypt(transformingInformation, "BdjFKfZJ5lKG9kqaDYrNwNhTilrqOECB", 2)
+	// if err3 != nil {
+	// 	fmt.Println(err3.Error())
+	// }
+
+	data := []byte("Ade Mawan")
+	byteCipherKey := []byte("Ade Mawan")
+	cipherText, _ := hex.DecodeString("1861467ae995cab10cf3435798e22f3b3a0ed7798f861cdd168980505c73c7a59d2ebe26c1fee5cd4cd67d47e51fc3f3df015d7a3006db9d5db25fab2ab8474313f0cf16f40e95b4c215ec3562b20a6a61cf25f8206c5079e7cb8ea49fe129cb20be96cb0d0a5c323c7241467fa780e9")
+	fmt.Println(fmt.Sprintf("%08b", cipherText))
+
+	fmt.Println(fmt.Sprintf("%x", byteCipherKey))
+
+	fmt.Println(fmt.Sprintf("%08b", byteCipherKey))
+
+	tmp := make([]byte, 16)
+	copy(tmp, byteCipherKey)
+	fmt.Println(tmp)
+	fmt.Println(fmt.Sprintf("%x", tmp))
+	for _, n := range data {
+
+		fmt.Printf("Byte=%v Binner=%08b ", n, n) // prints 00000000 11111101
 	}
+	fmt.Println(data)
+
+	fmt.Println([]byte{112})
+
+	//string to hexadecimal string
+	str := "Hello from ADMFactory.com"
+	hx := hex.EncodeToString([]byte(str))
+	fmt.Println("String to Hex Golang example")
+	fmt.Println(hx)
+
+	fmt.Println("=========================================")
+	aes_cbc.AesCBC()
+
 }
 
 func TranformProcess(ar *TransformingInformation) (string, error) {

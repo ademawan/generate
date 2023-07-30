@@ -7,11 +7,11 @@ package file
 	
 
 	data := map[string]interface{}{
-		"name":"Qagnn Efxs",
-		"email":"stfodt@gmail.com",
-		"phone":"hNxRo",
-		"password":"vYAlj",
-		"otp_token":"wqHrk",
+		"name":"Bafhl Efis",
+		"email":"czxwdq@gmail.com",
+		"phone":"OsFdq",
+		"password":"sJapS",
+		"otp_token":"myDcD",
 		
 	}
 	fmt.Println(data)

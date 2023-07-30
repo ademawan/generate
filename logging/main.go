@@ -21,25 +21,29 @@ var (
 
 func main() {
 	timeNow := time.Now()
+
+	time.Sleep(time.Duration(1) * time.Second)
+	fmt.Println(fmt.Sprintf("%v", time.Since(timeNow)))
+
 	// test := &Log2{Event: "sub validate", ResponseTime: time.Since(timeNow), Response: "holla"}
-	data, _ := json.Marshal("test")
-	CreateLog(&Log2{
-		Event:        "validate",
-		ResponseTime: time.Since(timeNow),
-		Response:     string(data),
-	})
+	// data, _ := json.Marshal("test")
+	// CreateLog(&Log2{
+	// 	Event:        "validate",
+	// 	ResponseTime: time.Since(timeNow),
+	// 	Response:     string(data),
+	// })
 
-	CreateLogV2(&Log2{
-		Event:        "validate",
-		ResponseTime: time.Since(timeNow),
-		Response:     string(data),
-	}, "info", "success")
+	// CreateLogV2(&Log2{
+	// 	Event:        "validate",
+	// 	ResponseTime: time.Since(timeNow),
+	// 	Response:     string(data),
+	// }, "info", "success")
 
-	go func(timeNow time.Time) {
-		HttpService("info", "GET", "", "purchase", http.StatusOK, "Success", time.Since(timeNow), "Url", "bofy")
+	// go func(timeNow time.Time) {
+	// 	HttpService("info", "GET", "", "purchase", http.StatusOK, "Success", time.Since(timeNow), "Url", "bofy")
 
-	}(timeNow)
-	time.Sleep(time.Duration(5) * time.Second)
+	// }(timeNow)
+	// time.Sleep(time.Duration(5) * time.Second)
 }
 
 func HttpService(level string, method string, request string, service string, status int, message string, responseTime time.Duration, url string, response string) {

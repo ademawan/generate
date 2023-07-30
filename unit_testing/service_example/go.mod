@@ -1,4 +1,4 @@
-module unit-test
+module service-example
 
 go 1.20
 

@@ -9,6 +9,7 @@ import (
 	"strconv"
 	"time"
 
+	xredis "github.com/go-redis/redis"
 	redis "github.com/redis/go-redis/v9"
 )
 
@@ -121,6 +122,21 @@ func main() {
 	// }
 
 	// time.Sleep(time.Duration(999) * time.Second)
+	res, err = redisRepo.GetString("kkkk")
+	if err != nil {
+		if err == xredis.Nil {
+			fmt.Println("ERROR GET STRONG Xredis")
+			fmt.Println(err.Error())
+
+		} else {
+			fmt.Println("ERROR GET STRONG")
+			fmt.Println(err.Error())
+		}
+
+	} else {
+		fmt.Println("SUCCESS GET STRONG")
+
+	}
 
 }
 
@@ -350,4 +366,18 @@ func (r *RedisRepository) GetKeys(prefixKey string) ([]string, error) {
 		}
 	}
 	return keys, nil
+}
+
+func (r *RedisRepository) GetString(key string) (string, error) {
+
+	contextTimeOut, _ := strconv.Atoi("20")
+	ctx, cancel := context.WithTimeout(context.Background(), time.Duration(contextTimeOut)*time.Second)
+	defer cancel()
+	dataRedis, err := r.redis.Get(ctx, key).Result()
+	if err != nil {
+
+		return dataRedis, err
+	}
+
+	return dataRedis, nil
 }

@@ -1,6 +1,6 @@
 package user
 
-import "unit-test/entities"
+import "service-example/entities"
 
 type User interface {
 	Create(user *entities.User) (*entities.User, error)

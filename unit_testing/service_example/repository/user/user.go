@@ -1,7 +1,7 @@
 package user
 
 import (
-	"unit-test/entities"
+	"service-example/entities"
 )
 
 type UserRepository struct {
